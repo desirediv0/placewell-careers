@@ -6,7 +6,7 @@ export const siteData = {
   
   hero: {
     headline: 'Building Teams. Shaping Leaders.',
-    description: 'Founded in 2008, Placewell Careers is a trusted talent solutions partner serving organizations across BFSI, IT/EdTech, Healthcare, and Hospitality sectors.\n\nBacked by a team of 50+ experienced professionals, we combine industry expertise, agility, and a client-centric approach to help businesses build high-performing teams and professionals advance their careers. Our commitment to quality, excellence, and long-term partnerships has made us a preferred recruitment partner across industries.',
+    description: 'Founded in 2008, Placewell Careers is a trusted talent solutions partner serving organizations across BFSI, Fintech, IT/EdTech, Healthcare, Hospitality, and emerging sectors.\n\nBacked by a team of 50+ experienced professionals, we combine industry expertise, agility, and a client-centric approach to help businesses build high-performing teams and professionals advance their careers. Our commitment to quality, excellence, and long-term partnerships has made us a preferred recruitment partner across industries.',
   },
 
   pillars: [
@@ -57,13 +57,13 @@ export const siteData = {
       },
       {
         year: 'Today',
-        title: 'A Trusted Recruitment Partner',
-        description: 'Today, Placewell Careers serves organizations across BFSI, IT/EdTech, Healthcare, Hospitality, and other emerging sectors. Our commitment to quality, agility, and client success has made us a preferred talent solutions partner for leading organizations.',
+        title: 'Expanding Capabilities',
+        description: 'Today, Placewell Careers serves organizations across BFSI, Fintech, IT/EdTech, Healthcare, Hospitality, and other emerging sectors. Alongside our established partnership network, we are strengthening our capabilities through dedicated recruitment teams focused on leadership and critical hiring, enabling us to deliver deeper expertise and greater execution excellence.',
       },
       {
         year: 'Looking Ahead',
-        title: 'Building on Experience',
-        description: 'As we enter our next phase of growth, we are focused on strengthening our recruitment capabilities through specialized industry practices, deeper domain expertise, and dedicated teams that deliver exceptional hiring outcomes. Our vision remains the same—to connect great talent with great opportunities while creating long-term value for our clients.',
+        title: 'Building Specialized Practices',
+        description: 'As we enter our next phase of growth, we are focused on developing specialized industry practices, expanding leadership hiring capabilities, and creating high-performing recruitment teams that deliver strategic talent solutions for evolving business needs.',
       },
     ],
   },
@@ -76,6 +76,7 @@ export const siteData = {
       image: '/team/saveena-grover.jpg',
       experience: '17+ Years',
       expertise: ['Strategic Leadership', 'Business Development', 'Organizational Growth'],
+      linkedin: 'https://www.linkedin.com/company/placewell-careers/',
     },
     {
       name: 'Sandeep Grover',
@@ -84,6 +85,7 @@ export const siteData = {
       image: '/team/sandeep-grover.jpg',
       experience: '16+ Years',
       expertise: ['Talent Acquisition', 'Recruitment Strategy', 'Business Development'],
+      linkedin: 'https://linkedin.com/in/sandeep-grover-32966320',
     },
     {
       name: 'Seema Bhatia',
@@ -92,10 +94,11 @@ export const siteData = {
       image: '/team/seema-bhatia.jpg',
       experience: '20+ Years',
       expertise: ['Executive Search', 'Talent Mapping', 'BFSI Hiring'],
+      linkedin: 'https://www.linkedin.com/company/placewell-careers/',
     },
   ],
 
-  teamNote: 'Team Placewell: Powered by Partnerships\n\nOur success is built on a collaborative partnership model that brings together experienced recruitment leaders and dedicated delivery teams. This structure enables us to combine domain expertise, market intelligence, and local insights to deliver exceptional hiring outcomes.\n\nToday, Placewell Careers is supported by a network of 50+ recruitment professionals working across multiple industries and functions. Led by Senior Partners and backed by specialized teams, we provide clients with focused, agile, and consultative talent solutions.',
+  teamNote: 'Team Placewell: Built on Partnerships. Driven by Expertise.\n\nPlacewell Careers has grown through a collaborative partnership model that brings together experienced recruitment professionals across industries and geographies.\n\nToday, this strength is complemented by dedicated in-house teams focused on specialized hiring mandates. Together, our network of 50+ professionals combines industry expertise, market insight, and execution excellence to deliver agile, consultative, and outcome-driven talent solutions.',
 
   vision: 'To be India\'s most trusted recruitment and talent solutions partner.',
   mission: 'To help organizations build winning teams by delivering quality talent, market insight, and recruitment excellence across every stage of growth.',
@@ -254,7 +257,7 @@ export const siteData = {
     },
     {
       question: 'What is the typical hiring turnaround time?',
-      answer: 'For most roles, we deliver a shortlisted candidate pipeline within 5-7 business days. Leadership and niche roles may take 2-3 weeks depending on complexity.',
+      answer: 'For most roles, we deliver a shortlisted candidate pipeline within 2-3 business days. Leadership and niche roles may take 3-7 days depending on complexity.',
     },
     {
       question: 'Does Placewell Careers offer RPO services?',

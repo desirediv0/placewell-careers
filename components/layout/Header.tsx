@@ -44,9 +44,12 @@ export default function Header() {
     <header className={`fixed top-0 w-full bg-white z-50 transition-all duration-300 ${scrolled ? 'border-b border-gray-200 shadow-sm' : 'border-b border-transparent'
       }`}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 py-3 md:py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center flex-shrink-0">
+        {/* Logo + Tagline */}
+        <Link href="/" className="flex items-center flex-shrink-0 gap-3">
           <img src={siteData.logo} alt={siteData.company} className="h-14 md:h-20 w-auto" />
+          <span className="hidden lg:block text-[11px] font-semibold text-[#64748b] tracking-wide leading-tight max-w-[120px]">
+            Building Teams.<br />Shaping Leaders
+          </span>
         </Link>
 
         {/* Center Navigation - Desktop */}

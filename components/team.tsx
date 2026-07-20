@@ -38,14 +38,12 @@ export default function Team() {
                 <div className={`absolute top-0 left-0 right-0 h-0.5 bg-[#1D4ED8] transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
 
                 {/* Portrait Section */}
-                <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-50 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className={`w-28 h-28 rounded-full bg-gradient-to-br from-[#1D4ED8] to-[#1e40af] flex items-center justify-center transition-all duration-300 ${isHovered ? 'scale-105' : ''}`}>
-                      <span className="text-3xl font-bold text-white">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                  </div>
+                <div className="relative h-96 min-h-[384px] bg-gradient-to-br from-gray-100 to-gray-50 overflow-hidden rounded-t-[6px]">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
                   <div className="absolute top-3 right-3 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[11px] font-semibold text-[#1D4ED8] shadow-sm">
                     {member.experience}
                   </div>
@@ -67,7 +65,7 @@ export default function Team() {
                   </div>
 
                   <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    <a href={member.linkedin || "https://www.linkedin.com/company/placewell-careers/"} target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-sm font-medium text-[#0A66C2] hover:text-[#004182] transition-colors"
                       onClick={(e) => e.stopPropagation()}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -101,15 +99,24 @@ export default function Team() {
           })}
         </div>
 
-        {/* Team Note - DOCX exact */}
+        {/* Team Note - Text Left, Images Right */}
         <div className="mt-12 bg-[#f8fafc] border border-gray-200 rounded-[6px] p-8 md:p-10">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-[#0f172a] mb-4">Team Placewell: Powered by Partnerships</h3>
-            {siteData.teamNote.split('\n\n').map((paragraph, idx) => (
-              <p key={idx} className="text-sm text-[#4B5563] leading-relaxed mb-3 last:mb-0">
-                {paragraph}
-              </p>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left Side - Text */}
+            <div>
+              <h3 className="text-xl font-bold text-[#0f172a] mb-4">Team Placewell: Built on Partnerships. Driven by Expertise.</h3>
+              {siteData.teamNote.split('\n\n').map((paragraph, idx) => (
+                <p key={idx} className="text-sm text-[#4B5563] leading-relaxed mb-3 last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            {/* Right Side - 3 Image Collage */}
+            <div className="flex gap-3 justify-center items-center">
+              <img src="/team/saveena-grover.jpg" alt="Saveena Grover" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
+              <img src="/team/sandeep-grover.jpg" alt="Sandeep Grover" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
+              <img src="/team/seema-bhatia.jpg" alt="Seema Bhatia" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
+            </div>
           </div>
         </div>
       </div>

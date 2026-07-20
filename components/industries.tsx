@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Landmark, WalletCards, ArrowRight } from 'lucide-react'
+import { Landmark, WalletCards, ArrowRight, Building2 } from 'lucide-react'
 
 const industries = [
   {
@@ -21,6 +21,15 @@ const industries = [
     color: 'from-indigo-600 to-indigo-800',
     bgColor: 'bg-indigo-50',
     iconColor: 'text-indigo-600',
+  },
+  {
+    icon: Building2,
+    name: 'GCC',
+    description: 'Global Capability Centers hiring across technology, operations, analytics and leadership functions.',
+    tag: 'Global Delivery',
+    color: 'from-violet-600 to-violet-800',
+    bgColor: 'bg-violet-50',
+    iconColor: 'text-violet-600',
   },
 ]
 
@@ -42,7 +51,7 @@ export default function Industries() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {industries.map((industry, idx) => {
             const Icon = industry.icon
             const isHovered = hoveredIndex === idx
@@ -50,7 +59,9 @@ export default function Industries() {
             return (
               <div
                 key={idx}
-                className="group relative bg-white rounded-[6px] border border-gray-200 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+                className={`group relative rounded-[6px] border border-gray-200 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer ${
+                  idx % 3 === 0 ? 'bg-[#f0f7ff]' : idx % 3 === 1 ? 'bg-[#f8fafc]' : 'bg-[#f5f3ff]'
+                }`}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >

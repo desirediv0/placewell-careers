@@ -29,7 +29,9 @@ export default function Services() {
           {siteData.services.map((service, idx) => (
             <div
               key={idx}
-              className="bg-white border border-gray-200 rounded-[6px] p-7 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+              className={`border border-gray-200 rounded-[6px] p-7 hover:shadow-lg transition-all duration-300 flex flex-col justify-between ${
+                idx % 3 === 0 ? 'bg-[#f0f7ff]' : idx % 3 === 1 ? 'bg-[#f8fafc]' : 'bg-[#f5f3ff]'
+              }`}
             >
               <div>
                 <div className="flex items-start gap-3.5 mb-5">

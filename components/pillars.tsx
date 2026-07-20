@@ -77,7 +77,9 @@ export default function Pillars() {
                 whileInView="visible"
                 viewport={{ once: true, margin: '-40px' }}
                 variants={cardVariants}
-                className="group relative bg-white rounded-[6px] border border-gray-200 p-8 h-full hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+                className={`group relative rounded-[6px] border border-gray-200 p-8 h-full hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ${
+                  idx % 3 === 0 ? 'bg-[#f0f7ff]' : idx % 3 === 1 ? 'bg-[#f8fafc]' : 'bg-[#f5f3ff]'
+                }`}
               >
                 {/* Blue top accent */}
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#1D4ED8] rounded-t-[6px] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />

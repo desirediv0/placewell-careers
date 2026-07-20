@@ -37,7 +37,7 @@ export default function Hero() {
           {/* Description - DOCX exact */}
           <div className="text-body-lg text-slate-300 leading-relaxed font-light max-w-2xl space-y-4">
             <p>
-              Founded in 2008, Placewell Careers is a trusted talent solutions partner serving organizations across BFSI, IT/EdTech, Healthcare, and Hospitality sectors.
+              Founded in 2008, Placewell Careers is a trusted talent solutions partner serving organizations across BFSI, Fintech, IT/EdTech, Healthcare, Hospitality, and emerging sectors.
             </p>
             <p>
               Backed by a team of 50+ experienced professionals, we combine industry expertise, agility, and a client-centric approach to help businesses build high-performing teams and professionals advance their careers. Our commitment to quality, excellence, and long-term partnerships has made us a preferred recruitment partner across industries.

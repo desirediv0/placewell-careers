@@ -31,10 +31,13 @@ export default function Offices() {
           {siteData.offices.map((office, idx) => (
             <div
               key={idx}
-              className={`group relative bg-white rounded-[6px] border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden ${office.isHeadquarters
-                ? 'border-[#1D4ED8] shadow-md'
-                : 'border-gray-200 hover:border-[#1D4ED8]/30'
-                }`}
+              className={`group relative rounded-[6px] border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden ${
+                office.isHeadquarters
+                  ? 'border-[#1D4ED8] shadow-md bg-[#f0f7ff]'
+                  : `border-gray-200 hover:border-[#1D4ED8]/30 ${
+                      idx % 3 === 0 ? 'bg-[#f8fafc]' : idx % 3 === 1 ? 'bg-white' : 'bg-[#f5f3ff]'
+                    }`
+              }`}
             >
               {/* Top Accent */}
               <div className={`h-0.5 ${office.isHeadquarters ? 'bg-[#1D4ED8]' : 'bg-gray-200 group-hover:bg-[#1D4ED8]'} transition-colors duration-300`} />

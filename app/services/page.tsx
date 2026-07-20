@@ -11,7 +11,7 @@ import {
   Target, Eye, Award, Shield, Clock, Zap,
   Landmark, WalletCards, Laptop, HeartPulse, Hotel, Sparkles,
   MessageSquare, Lightbulb, PhoneCall, ClipboardCheck, FileCheck, Trophy,
-  BadgeCheck, Rocket
+  BadgeCheck, Rocket, Building2
 } from 'lucide-react'
 
 function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
@@ -162,7 +162,7 @@ const industryIcons = [
   { icon: Laptop, name: 'IT / EdTech', color: 'bg-violet-50 text-violet-600' },
   { icon: HeartPulse, name: 'Healthcare', color: 'bg-rose-50 text-rose-600' },
   { icon: Hotel, name: 'Hospitality', color: 'bg-amber-50 text-amber-600' },
-  { icon: Sparkles, name: 'Emerging Industries', color: 'bg-emerald-50 text-emerald-600' },
+  { icon: Building2, name: 'GCC', color: 'bg-emerald-50 text-emerald-600' },
 ]
 
 export default function ServicesPage() {

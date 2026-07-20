@@ -71,14 +71,12 @@ export default function TeamPage() {
                   >
                     <div className={`absolute top-0 left-0 right-0 h-1 bg-[#1D4ED8] transition-all duration-500 z-10 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
 
-                    <div className="relative h-72 bg-gradient-to-br from-gray-100 to-gray-50 overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className={`w-32 h-32 rounded-full bg-gradient-to-br from-[#1D4ED8] to-[#1e40af] flex items-center justify-center transition-all duration-500 ${isHovered ? 'scale-110' : ''}`}>
-                          <span className="text-4xl font-bold text-white">
-                            {member.name.split(' ').map(n => n[0]).join('')}
-                          </span>
-                        </div>
-                      </div>
+                    <div className="relative h-96 min-h-[384px] bg-gradient-to-br from-gray-100 to-gray-50 overflow-hidden rounded-t-[6px]">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                      />
                       <div className="absolute top-4 right-4 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#1D4ED8] shadow-sm">
                         {member.experience}
                       </div>
@@ -99,6 +97,14 @@ export default function TeamPage() {
                       </div>
 
                       <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <a href={member.linkedin || "https://www.linkedin.com/company/placewell-careers/"} target="_blank" rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-sm font-medium text-[#0A66C2] hover:text-[#004182] transition-colors"
+                          onClick={(e) => e.stopPropagation()}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                          </svg>
+                          <span>LinkedIn</span>
+                        </a>
                         <button
                           onClick={() => setExpandedId(isExpanded ? null : idx)}
                           className="flex items-center gap-1.5 text-sm font-medium text-[#1D4ED8] hover:text-[#1e3a8a] transition-colors"
@@ -136,13 +142,22 @@ export default function TeamPage() {
             className="mt-16"
           >
             <div className="bg-white border border-gray-200 rounded-[6px] p-10 md:p-12">
-              <div className="max-w-4xl mx-auto text-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-6">
-                  Team Placewell: Powered by Partnerships
-                </h3>
-                <p className="text-body-lg text-[#64748b] leading-relaxed whitespace-pre-line">
-                  {siteData.teamNote}
-                </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                {/* Left Side - Text */}
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-6">
+                    Team Placewell: Built on Partnerships. Driven by Expertise.
+                  </h3>
+                  <p className="text-body-lg text-[#64748b] leading-relaxed whitespace-pre-line">
+                    {siteData.teamNote}
+                  </p>
+                </div>
+                {/* Right Side - 3 Image Collage */}
+                <div className="flex gap-3 justify-center items-center">
+                  <img src="/team/saveena-grover.jpg" alt="Saveena Grover" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
+                  <img src="/team/sandeep-grover.jpg" alt="Sandeep Grover" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
+                  <img src="/team/seema-bhatia.jpg" alt="Seema Bhatia" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
+                </div>
               </div>
             </div>
           </motion.div>
