@@ -6,7 +6,7 @@ import { ShieldCheck, Users, BadgeCheck, Clock3, Handshake, TrendingUp } from 'l
 const pillars = [
   {
     icon: ShieldCheck,
-    stat: '17+ Years',
+    stat: '18+ Years',
     title: 'Trust in Talent Acquisition',
     description: 'A trusted recruitment partner backed by deep industry expertise.',
   },

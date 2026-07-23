@@ -102,10 +102,15 @@ export default function Offices() {
                 </div>
 
                 {/* View on Map */}
-                <button className="mt-3 w-full flex items-center justify-center gap-1.5 py-2 text-xs font-semibold text-[#1D4ED8] bg-blue-50 rounded-[6px] hover:bg-[#1D4ED8] hover:text-white transition-all duration-300">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address ? `${office.address}, ${office.city}` : `${office.city}, India`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 w-full flex items-center justify-center gap-1.5 py-2 text-xs font-semibold text-[#1D4ED8] bg-blue-50 rounded-[6px] hover:bg-[#1D4ED8] hover:text-white transition-all duration-300"
+                >
                   <ExternalLink size={11} />
                   View on Map
-                </button>
+                </a>
               </div>
             </div>
           ))}

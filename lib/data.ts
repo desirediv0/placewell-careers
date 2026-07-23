@@ -11,7 +11,7 @@ export const siteData = {
 
   pillars: [
     {
-      stat: '17+',
+      stat: '18+',
       title: 'Years of Trust in Talent Acquisition',
       description: 'Deep industry expertise & proven recruitment track record.',
     },
@@ -74,7 +74,7 @@ export const siteData = {
       role: 'Promoter',
       bio: 'The driving force behind Placewell Careers, Saveena provides strategic direction and long-term vision for the organization. An Economics graduate, she is known for her collaborative leadership style and focus on building a culture of integrity, ownership, and sustainable growth.',
       image: '/team/saveena-grover.jpg',
-      experience: '17+ Years',
+      experience: '18+ Years',
       expertise: ['Strategic Leadership', 'Business Development', 'Organizational Growth'],
       linkedin: 'https://www.linkedin.com/company/placewell-careers/',
     },
@@ -85,7 +85,7 @@ export const siteData = {
       image: '/team/sandeep-grover.jpg',
       experience: '16+ Years',
       expertise: ['Talent Acquisition', 'Recruitment Strategy', 'Business Development'],
-      linkedin: 'https://linkedin.com/in/sandeep-grover-32966320',
+      linkedin: 'https://www.linkedin.com/in/sandeep-grover-32966320/',
     },
     {
       name: 'Seema Bhatia',
@@ -94,7 +94,7 @@ export const siteData = {
       image: '/team/seema-bhatia.jpg',
       experience: '20+ Years',
       expertise: ['Executive Search', 'Talent Mapping', 'BFSI Hiring'],
-      linkedin: 'https://www.linkedin.com/company/placewell-careers/',
+      linkedin: 'https://www.linkedin.com/in/seema-chouhan-bhatia',
     },
   ],
 

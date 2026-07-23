@@ -328,7 +328,7 @@ export default function ServicesPage() {
                 {/* Floating Experience Badge */}
                 <div className="absolute -bottom-6 -right-6 md:right-6 bg-[#030d1e] text-white border border-blue-900/50 rounded-full p-6 shadow-2xl flex items-center gap-3 transform hover:scale-105 transition-transform duration-300">
                   <div className="w-12 h-12 rounded-full bg-[#2D6CDF] flex items-center justify-center text-white font-bold text-lg">
-                    17+
+                    18+
                   </div>
                   <div>
                     <div className="font-bold text-sm tracking-tight text-white leading-tight">Years</div>
@@ -466,9 +466,9 @@ export default function ServicesPage() {
             <div className="md:col-span-2 bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] rounded-[6px] p-8 md:p-10 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#1D4ED8]/20 rounded-full blur-3xl" />
               <div className="relative z-10">
-                <div className="text-6xl md:text-7xl font-bold mb-2">17+</div>
+                <div className="text-6xl md:text-7xl font-bold mb-2">18+</div>
                 <div className="text-xl font-semibold text-[#94a3b8] mb-4">Years Experience</div>
-                <p className="text-[#94a3b8] max-w-md">Trusted by leading organizations for over 17 years of excellence in talent acquisition.</p>
+                <p className="text-[#94a3b8] max-w-md">Trusted by leading organizations for over 18 years of excellence in talent acquisition.</p>
               </div>
             </div>
 
@@ -530,7 +530,7 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             <div className="text-center">
-              <AnimatedCounter value={17} suffix="+" />
+              <AnimatedCounter value={18} suffix="+" />
               <div className="text-[#94a3b8] mt-2 font-medium">Years</div>
             </div>
             <div className="text-center">

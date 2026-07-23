@@ -125,7 +125,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#0b1a30]">
         <div className="absolute inset-0">
-          <img src="/hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover" />
+          <img src="/contact-hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a30] via-[#0b1a30]/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0b1a30]/80 via-transparent to-[#0b1a30]/20" />
         </div>
@@ -168,7 +168,7 @@ export default function ContactPage() {
               </p>
 
               <p className="text-[#64748b] leading-relaxed mb-10">
-                With 17+ years of experience and a network of 50+ recruitment professionals, we bring market intelligence, domain expertise, and a proven track record to every engagement.
+                With 18+ years of experience and a network of 50+ recruitment professionals, we bring market intelligence, domain expertise, and a proven track record to every engagement.
               </p>
 
               {/* Business Hours */}
@@ -582,11 +582,13 @@ export default function ContactPage() {
                     Call
                   </a>
                   <a
-                    href={`mailto:${office.email}`}
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address ? `${office.address}, ${office.city}` : `${office.city}, India`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#f8fafc] hover:bg-[#1D4ED8] hover:text-white text-[#475569] text-xs font-semibold rounded-lg transition-all border border-gray-100"
                   >
-                    <Mail size={12} />
-                    Email
+                    <MapPin size={12} />
+                    Map
                   </a>
                 </div>
               </motion.div>
@@ -598,7 +600,7 @@ export default function ContactPage() {
       {/* CTA */}
       <section className="relative py-12 md:py-16 px-5 md:px-8 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover" />
+          <img src="/contact-hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-[#0b1a30]/90" />
         </div>
 
