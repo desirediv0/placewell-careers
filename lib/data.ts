@@ -243,7 +243,7 @@ export const siteData = {
   emergencyContact: {
     available: 'Available for urgent hiring requirements',
     phone: '+91 98150 87070',
-    email: 'sandeep.grover@placewellcareers.com',
+    email: 'support@placewellcareers.com',
   },
 
   faq: [

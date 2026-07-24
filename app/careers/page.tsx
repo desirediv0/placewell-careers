@@ -461,7 +461,7 @@ export default function CareersPage() {
                   Call Now
                 </button>
               </a>
-              <a href="mailto:sandeep.grover@placewellcareers.com">
+              <a href="mailto:support@placewellcareers.com">
                 <button className="w-full sm:w-auto h-[52px] px-7 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-3">
                   <Mail size={18} />
                   Email Us

@@ -52,7 +52,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:sandeep.grover@placewellcareers.com"
+                href="mailto:support@placewellcareers.com"
                 className="w-9 h-9 bg-white rounded-[6px] flex items-center justify-center hover:bg-[#223A8F] hover:text-white transition-colors text-[#223A8F] shadow-sm"
                 aria-label="Email"
               >
@@ -143,8 +143,8 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-white rounded-[6px] flex items-center justify-center flex-shrink-0 shadow-sm">
                   <Mail size={14} className="text-[#223A8F]" />
                 </div>
-                <a href="mailto:sandeep.grover@placewellcareers.com" className="text-xs text-[#4B5563] hover:text-[#223A8F] transition-colors break-all">
-                  sandeep.grover@placewellcareers.com
+                <a href="mailto:support@placewellcareers.com" className="text-xs text-[#4B5563] hover:text-[#223A8F] transition-colors break-all">
+                  support@placewellcareers.com
                 </a>
               </div>
 
