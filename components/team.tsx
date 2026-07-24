@@ -111,11 +111,9 @@ export default function Team() {
                 </p>
               ))}
             </div>
-            {/* Right Side - 3 Image Collage */}
-            <div className="flex gap-3 justify-center items-center">
-              <img src="/team/saveena-grover.jpg" alt="Saveena Grover" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
-              <img src="/team/sandeep-grover.jpg" alt="Sandeep Grover" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
-              <img src="/team/seema-bhatia.jpg" alt="Seema Bhatia" className="w-1/3 h-56 object-cover object-center rounded-[6px] shadow-sm" />
+            {/* Right Side - Team Photo */}
+            <div className="flex justify-center items-center">
+              <img src="/team/team.jpg" alt="Team Placewell" className="w-full h-auto max-h-[350px] object-contain rounded-[6px] shadow-sm" />
             </div>
           </div>
         </div>
