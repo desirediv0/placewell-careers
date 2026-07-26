@@ -71,7 +71,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[90vh] md:min-h-screen flex items-end pt-32 md:pt-40 lg:pt-44 pb-16 md:pb-24 px-5 md:px-8 lg:px-24 bg-[#030d1e] overflow-hidden select-none"
+      className="relative min-h-[90vh] md:min-h-screen flex items-end pt-32 md:pt-40 lg:pt-44 pb-16 md:pb-24 px-5 md:px-8 lg:px-24 bg-[#FAF8F4] overflow-hidden select-none"
     >
       {/* Background Image Carousel with Smooth Fade */}
       <AnimatePresence mode="wait">
@@ -89,10 +89,11 @@ export default function Hero() {
               e.currentTarget.src = slide.fallbackBg
             }}
             alt="Corporate Hero Background"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center photo-light"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#030d1e] via-[#030d1e]/85 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#030d1e] via-transparent to-[#030d1e]/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] via-[#FAF8F4]/90 to-[#FAF8F4]/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4] via-[#FAF8F4]/25 to-[#FAF8F4]/55" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#E8F4F1]/40 via-transparent to-[#FDF3E3]/40" />
         </motion.div>
       </AnimatePresence>
 
@@ -109,26 +110,26 @@ export default function Hero() {
               className="space-y-5 md:space-y-6"
             >
               {/* Badge */}
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 backdrop-blur-md">
-                <Sparkles size={14} className="text-blue-400 animate-pulse" />
-                <span className="text-xs font-semibold tracking-wider text-blue-200 uppercase">
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#E8F4F1] border border-[#0E6F66]/20 backdrop-blur-md">
+                <Sparkles size={14} className="text-[#0E6F66] animate-pulse" />
+                <span className="text-xs font-semibold tracking-wider text-[#0E6F66] uppercase">
                   {slide.badge}
                 </span>
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight whitespace-pre-line leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#2B3138] tracking-tight whitespace-pre-line leading-[1.1]">
                 {slide.title}
               </h1>
 
               {slide.highlight && (
-                <p className="text-lg md:text-xl font-semibold text-blue-400 tracking-wide">
+                <p className="text-lg md:text-xl font-semibold text-[#0E6F66] tracking-wide">
                   {slide.highlight}
                 </p>
               )}
 
               {/* Description */}
-              <div className="text-body-lg text-slate-300 leading-relaxed font-light max-w-2xl space-y-3">
+              <div className="text-body-lg text-[#565E69] leading-relaxed font-light max-w-2xl space-y-3">
                 {slide.paragraphs.map((p, idx) => (
                   <p key={idx}>{p}</p>
                 ))}
@@ -138,13 +139,13 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
                 <Link
                   href={slide.primaryCta.href}
-                  className="inline-flex items-center justify-center gap-2.5 h-[52px] px-8 bg-[#2D6CDF] hover:bg-[#1D4ED8] text-white font-semibold text-sm rounded-[6px] transition-all duration-300 shadow-xl shadow-blue-600/30 hover:scale-[1.02]"
+                  className="inline-flex items-center justify-center gap-2.5 h-[52px] px-8 bg-[#2F68AB] hover:bg-[#27578F] text-white font-semibold text-sm rounded-[6px] transition-all duration-300 shadow-lg shadow-[#2F68AB]/25 hover:scale-[1.02]"
                 >
                   {slide.primaryCta.text} <PrimaryIcon size={16} />
                 </Link>
                 <Link
                   href={slide.secondaryCta.href}
-                  className="inline-flex items-center justify-center gap-2.5 h-[52px] px-8 border border-slate-600/80 bg-slate-900/40 hover:bg-slate-800/60 text-white font-semibold text-sm rounded-[6px] transition-all duration-300 hover:border-slate-400"
+                  className="inline-flex items-center justify-center gap-2.5 h-[52px] px-8 border border-[#0E6F66]/30 bg-white/80 hover:bg-white text-[#0E6F66] font-semibold text-sm rounded-[6px] transition-all duration-300 hover:border-[#0E6F66] backdrop-blur-sm"
                 >
                   {slide.secondaryCta.text} <SecondaryIcon size={16} />
                 </Link>
@@ -154,7 +155,7 @@ export default function Hero() {
         </div>
 
         {/* Carousel Navigation Controls */}
-        <div className="mt-10 md:mt-12 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-10 md:mt-12 pt-6 border-t border-[#2B3138]/12 flex flex-wrap items-center justify-between gap-4">
           {/* Progress Indicators / Dots */}
           <div className="flex items-center gap-3">
             {slides.map((_, idx) => (
@@ -163,11 +164,11 @@ export default function Hero() {
                 onClick={() => setCurrentSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`relative h-2 rounded-full transition-all duration-500 ${
-                  currentSlide === idx ? 'w-10 bg-[#2D6CDF]' : 'w-2 bg-slate-700 hover:bg-slate-500'
+                  currentSlide === idx ? 'w-10 bg-[#0E6F66]' : 'w-2 bg-[#2B3138]/20 hover:bg-[#2B3138]/40'
                 }`}
               />
             ))}
-            <span className="ml-2 text-xs font-mono text-slate-400">
+            <span className="ml-2 text-xs font-mono text-[#6B7480]">
               0{currentSlide + 1} / 0{slides.length}
             </span>
           </div>
@@ -177,14 +178,14 @@ export default function Hero() {
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
-              className="w-11 h-11 rounded-full bg-slate-900/80 border border-slate-700/80 hover:border-blue-500 hover:bg-blue-600/20 text-white flex items-center justify-center transition-all duration-300"
+              className="w-11 h-11 rounded-full bg-white/85 border border-[#E6E2DB] hover:border-[#0E6F66] hover:bg-[#E8F4F1] text-[#2B3138] flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next Slide"
-              className="w-11 h-11 rounded-full bg-slate-900/80 border border-slate-700/80 hover:border-blue-500 hover:bg-blue-600/20 text-white flex items-center justify-center transition-all duration-300"
+              className="w-11 h-11 rounded-full bg-white/85 border border-[#E6E2DB] hover:border-[#0E6F66] hover:bg-[#E8F4F1] text-[#2B3138] flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
             >
               <ChevronRight size={18} />
             </button>

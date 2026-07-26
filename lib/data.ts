@@ -2,7 +2,7 @@ export const siteData = {
   company: 'Placewell Careers',
   tagline: 'Building Teams. Shaping Leaders.',
   founded: 2008,
-  logo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TIe9uCZUi04GjJMI3fExxz2iMIFstn.png',
+  logo: '/placewell-logo.png',
   
   hero: {
     headline: 'Building Teams. Shaping Leaders.',
@@ -73,7 +73,7 @@ export const siteData = {
       name: 'Saveena Grover',
       role: 'Promoter',
       bio: 'The driving force behind Placewell Careers, Saveena provides strategic direction and long-term vision for the organization. An Economics graduate, she is known for her collaborative leadership style and focus on building a culture of integrity, ownership, and sustainable growth.',
-      image: '/team/saveena-grover.jpg',
+      image: '/team/saveena-grover.png',
       experience: '18+ Years',
       expertise: ['Strategic Leadership', 'Business Development', 'Organizational Growth'],
       linkedin: 'https://www.linkedin.com/company/placewell-careers/',

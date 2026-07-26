@@ -62,22 +62,22 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact-us" className="py-12 md:py-16 px-5 md:px-8 bg-[#F8FAFC]">
+    <section id="contact-us" className="py-12 md:py-16 px-5 md:px-8 bg-[#FAF8F4]">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-4xl font-bold text-[#1F2937] mb-3">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#2B3138] mb-3">
             Get In Touch
           </h2>
-          <p className="text-body-lg text-[#4B5563]">
+          <p className="text-body-lg text-[#565E69]">
             Connect with our team about opportunities or inquire about our services
           </p>
         </div>
 
         {submitted ? (
-          <div className="p-10 bg-white border border-[#2D6CDF] rounded-[6px] text-center">
-            <CheckCircle size={44} className="text-[#2D6CDF] mx-auto mb-3" />
-            <h3 className="text-xl font-bold text-[#1F2937] mb-2">Thank You</h3>
-            <p className="text-sm text-[#4B5563]">We&apos;ll be in touch shortly with more information.</p>
+          <div className="p-10 bg-white border border-[#0E6F66] rounded-[6px] text-center">
+            <CheckCircle size={44} className="text-[#0E6F66] mx-auto mb-3" />
+            <h3 className="text-xl font-bold text-[#2B3138] mb-2">Thank You</h3>
+            <p className="text-sm text-[#565E69]">We&apos;ll be in touch shortly with more information.</p>
           </div>
         ) : (
           <form
@@ -93,12 +93,12 @@ export default function Contact() {
 
             {/* Name */}
             <div>
-              <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">Full Name</label>
+              <label className="block text-sm font-semibold text-[#2B3138] mb-1.5">Full Name</label>
               <input
                 {...register('name', { required: 'Name is required' })}
                 type="text"
                 suppressHydrationWarning
-                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#1F2937] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#223A8F] rounded-[6px] transition-colors text-sm"
+                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#2B3138] placeholder:text-[#9AA1AC] focus:outline-none focus:border-[#2F68AB] rounded-[6px] transition-colors text-sm"
                 placeholder="Your Name"
               />
               {errors.name && <p className="text-xs text-red-600 mt-1">{errors.name.message}</p>}
@@ -106,7 +106,7 @@ export default function Contact() {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">Email</label>
+              <label className="block text-sm font-semibold text-[#2B3138] mb-1.5">Email</label>
               <input
                 {...register('email', {
                   required: 'Email is required',
@@ -117,7 +117,7 @@ export default function Contact() {
                 })}
                 type="email"
                 suppressHydrationWarning
-                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#1F2937] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#223A8F] rounded-[6px] transition-colors text-sm"
+                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#2B3138] placeholder:text-[#9AA1AC] focus:outline-none focus:border-[#2F68AB] rounded-[6px] transition-colors text-sm"
                 placeholder="your@email.com"
               />
               {errors.email && <p className="text-xs text-red-600 mt-1">{errors.email.message}</p>}
@@ -125,12 +125,12 @@ export default function Contact() {
 
             {/* Phone */}
             <div>
-              <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">Phone</label>
+              <label className="block text-sm font-semibold text-[#2B3138] mb-1.5">Phone</label>
               <input
                 {...register('phone', { required: 'Phone is required' })}
                 type="tel"
                 suppressHydrationWarning
-                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#1F2937] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#223A8F] rounded-[6px] transition-colors text-sm"
+                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#2B3138] placeholder:text-[#9AA1AC] focus:outline-none focus:border-[#2F68AB] rounded-[6px] transition-colors text-sm"
                 placeholder="+91 XXXXX XXXXX"
               />
               {errors.phone && <p className="text-xs text-red-600 mt-1">{errors.phone.message}</p>}
@@ -138,12 +138,12 @@ export default function Contact() {
 
             {/* Subject */}
             <div>
-              <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">Subject</label>
+              <label className="block text-sm font-semibold text-[#2B3138] mb-1.5">Subject</label>
               <input
                 {...register('subject', { required: 'Subject is required' })}
                 type="text"
                 suppressHydrationWarning
-                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#1F2937] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#223A8F] rounded-[6px] transition-colors text-sm"
+                className="w-full h-[44px] px-4 bg-white border border-gray-200 text-[#2B3138] placeholder:text-[#9AA1AC] focus:outline-none focus:border-[#2F68AB] rounded-[6px] transition-colors text-sm"
                 placeholder="Enquiry / Application / Partnership"
               />
               {errors.subject && <p className="text-xs text-red-600 mt-1">{errors.subject.message}</p>}
@@ -151,12 +151,12 @@ export default function Contact() {
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">Message</label>
+              <label className="block text-sm font-semibold text-[#2B3138] mb-1.5">Message</label>
               <textarea
                 {...register('message', { required: 'Message is required' })}
                 rows={4}
                 suppressHydrationWarning
-                className="w-full px-4 py-3 bg-white border border-gray-200 text-[#1F2937] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#223A8F] rounded-[6px] transition-colors resize-none text-sm"
+                className="w-full px-4 py-3 bg-white border border-gray-200 text-[#2B3138] placeholder:text-[#9AA1AC] focus:outline-none focus:border-[#2F68AB] rounded-[6px] transition-colors resize-none text-sm"
                 placeholder="Tell us more about your inquiry..."
               ></textarea>
               {errors.message && <p className="text-xs text-red-600 mt-1">{errors.message.message}</p>}
@@ -164,7 +164,7 @@ export default function Contact() {
 
             {/* CV Upload */}
             <div>
-              <label className="block text-sm font-semibold text-[#1F2937] mb-1.5">Upload CV (Optional)</label>
+              <label className="block text-sm font-semibold text-[#2B3138] mb-1.5">Upload CV (Optional)</label>
               <div className="relative">
                 <input
                   type="file"
@@ -175,10 +175,10 @@ export default function Contact() {
                 />
                 <label
                   htmlFor="cv-upload"
-                  className="flex items-center justify-center gap-3 p-5 border-2 border-dashed border-gray-200 hover:border-[#223A8F] cursor-pointer transition-colors bg-[#F8FAFC] rounded-[6px]"
+                  className="flex items-center justify-center gap-3 p-5 border-2 border-dashed border-gray-200 hover:border-[#2F68AB] cursor-pointer transition-colors bg-[#FAF8F4] rounded-[6px]"
                 >
-                  <Upload size={18} className="text-[#223A8F]" />
-                  <span className="text-sm text-[#6B7280]">
+                  <Upload size={18} className="text-[#2F68AB]" />
+                  <span className="text-sm text-[#6B7480]">
                     Drop your CV or click to browse
                   </span>
                 </label>
@@ -189,7 +189,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full h-[48px] bg-[#223A8F] text-white font-semibold text-sm rounded-[6px] hover:bg-[#1a2a6f] disabled:opacity-50 transition-colors"
+              className="w-full h-[48px] bg-[#2F68AB] text-white font-semibold text-sm rounded-[6px] hover:bg-[#27578F] disabled:opacity-50 transition-colors"
             >
               {isLoading ? 'Sending...' : 'Send Enquiry'}
             </button>

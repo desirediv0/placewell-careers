@@ -62,10 +62,10 @@ export default function AnimatedCounter({ value, suffix = '', label, duration = 
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl lg:text-5xl font-bold text-[#223A8F] mb-2">
+      <div className="text-4xl lg:text-5xl font-bold text-[#0E6F66] mb-2">
         {formatNumber(count)}{suffix}
       </div>
-      <p className="text-base text-[#4B5563] font-medium">{label}</p>
+      <p className="text-base text-[#565E69] font-medium">{label}</p>
     </div>
   )
 }

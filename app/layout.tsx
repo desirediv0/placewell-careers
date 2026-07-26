@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#223A8F',
+  themeColor: '#FAF8F4',
   userScalable: true,
 }
 
@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${manrope.variable} ${jost.variable} scroll-smooth`}>
-      <body className="font-body antialiased bg-white text-[#1F2937]">
+      <body className="font-body antialiased bg-white text-[#2B3138]">
         <Layout>{children}</Layout>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
