@@ -164,6 +164,12 @@
 @utility photo-soft {
   filter: brightness(1.12) saturate(0.3) contrast(0.97);
 }
+/* Home hero. The three slides are a warm interior, a cold blue macro and a
+   neutral office shot, so they are pulled toward each other rather than
+   drained — the brand gradient over the top does the harmonising. */
+@utility photo-hero {
+  filter: saturate(0.92) contrast(1.06) brightness(1.02);
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar {

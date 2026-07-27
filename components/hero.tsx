@@ -17,6 +17,7 @@ const slides = [
     ],
     bgImage: '/hero-1.jpg',
     fallbackBg: '/hero-bg.png',
+    focus: 'center 34%',
     primaryCta: { text: 'Drop Your CV', href: '/contact', icon: Upload },
     secondaryCta: { text: 'Enquiry', href: '/contact', icon: ArrowUpRight },
   },
@@ -29,6 +30,7 @@ const slides = [
     ],
     bgImage: '/hero-2.jpg',
     fallbackBg: '/hero-bg.png',
+    focus: '62% center',
     primaryCta: { text: 'Explore Services', href: '/services', icon: ArrowUpRight },
     secondaryCta: { text: 'Meet Our Team', href: '/team', icon: ArrowUpRight },
   },
@@ -41,6 +43,7 @@ const slides = [
     ],
     bgImage: '/hero-3.jpg',
     fallbackBg: '/hero-bg.png',
+    focus: '72% center',
     primaryCta: { text: 'Book Consultation', href: '/contact', icon: ArrowUpRight },
     secondaryCta: { text: 'Office Locations', href: '/contact', icon: ArrowUpRight },
   },
@@ -57,13 +60,14 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }, [])
 
-  // Auto scroll every 9 seconds continuously
+  // Auto scroll every 9 seconds. Keyed on currentSlide so that choosing a slide
+  // by hand restarts the countdown instead of letting it fire straight after.
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 9000)
     return () => clearInterval(timer)
-  }, [])
+  }, [currentSlide])
 
   const slide = slides[currentSlide]
   const PrimaryIcon = slide.primaryCta.icon
@@ -71,7 +75,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[90vh] md:min-h-screen flex items-end pt-32 md:pt-40 lg:pt-44 pb-16 md:pb-24 px-5 md:px-8 lg:px-24 bg-[#FAF8F4] overflow-hidden select-none"
+      className="relative min-h-[90vh] md:min-h-screen flex items-center pt-36 md:pt-44 pb-16 md:pb-20 px-5 md:px-8 lg:px-24 bg-[#FAF8F4] overflow-hidden select-none"
     >
       {/* Background Image Carousel with Smooth Fade */}
       <AnimatePresence mode="wait">
@@ -89,18 +93,26 @@ export default function Hero() {
               e.currentTarget.src = slide.fallbackBg
             }}
             alt="Corporate Hero Background"
-            className="w-full h-full object-cover object-center photo-light"
+            style={{ objectPosition: slide.focus }}
+            className="w-full h-full object-cover photo-hero"
           />
-          {/* A light scrim behind the copy only — kept just strong enough to hold
-              the text, and clear of the image from ~65% across. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4]/92 via-[#FAF8F4]/65 via-48% to-transparent to-78%" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4]/45 via-transparent to-transparent" />
+          {/* Brand wash — ties the three very different photographs into one
+              palette and puts colour back into the section. */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0E6F66]/40 via-[#0E6F66]/8 to-[#C9821F]/38 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#2F68AB]/22 via-transparent to-[#E3A33F]/12" />
+          {/* Softens the left third behind the copy panel and feeds the section
+              into the page background below it. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#14181D]/35 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4] via-transparent to-transparent" />
         </motion.div>
       </AnimatePresence>
 
       {/* Main Content Area */}
       <div className="max-w-[1400px] mx-auto w-full relative z-10">
-        <div className="max-w-3xl">
+        {/* The copy sits on its own frosted surface, so legibility no longer
+            depends on whichever photograph is behind it. */}
+        <div className="max-w-3xl relative overflow-hidden rounded-[6px] bg-white/82 backdrop-blur-xl border border-white/60 shadow-[0_28px_80px_-24px_rgba(20,24,29,0.5)] p-6 sm:p-8 md:p-10">
+          <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#0E6F66] via-[#2F68AB] to-[#C9821F]" />
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -153,10 +165,9 @@ export default function Hero() {
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
 
         {/* Carousel Navigation Controls */}
-        <div className="mt-10 md:mt-12 pt-6 border-t border-[#14181D]/12 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-8 md:mt-10 pt-5 border-t border-[#14181D]/12 flex flex-wrap items-center justify-between gap-4">
           {/* Progress Indicators / Dots */}
           <div className="flex items-center gap-3">
             {slides.map((_, idx) => (
@@ -191,6 +202,7 @@ export default function Hero() {
               <ChevronRight size={18} />
             </button>
           </div>
+        </div>
         </div>
       </div>
     </section>
