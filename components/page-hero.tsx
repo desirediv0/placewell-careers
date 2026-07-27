@@ -15,7 +15,7 @@ export default function PageHero({ title, subtitle, description, breadcrumbs, ch
     <section className="pt-28 pb-12 px-5 md:px-8 bg-[#FAF8F4] border-b border-gray-200">
       <div className="max-w-[1400px] mx-auto">
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <div className="flex items-center gap-2 text-sm text-[#6B7480] mb-5">
+          <div className="flex items-center gap-2 text-sm text-[#3B434C] mb-5">
             {breadcrumbs.map((crumb, idx) => (
               <span key={idx} className="flex items-center gap-2">
                 {idx > 0 && <span>/</span>}
@@ -24,7 +24,7 @@ export default function PageHero({ title, subtitle, description, breadcrumbs, ch
                     {crumb.label}
                   </a>
                 ) : (
-                  <span className="text-[#2B3138] font-medium">{crumb.label}</span>
+                  <span className="text-[#14181D] font-medium">{crumb.label}</span>
                 )}
               </span>
             ))}
@@ -32,7 +32,7 @@ export default function PageHero({ title, subtitle, description, breadcrumbs, ch
         )}
 
         <div className="max-w-3xl">
-          <h1 className="text-3xl md:text-4xl  font-bold text-[#2B3138] mb-3">
+          <h1 className="text-3xl md:text-4xl  font-bold text-[#14181D] mb-3">
             {title}
           </h1>
           {subtitle && (
@@ -41,7 +41,7 @@ export default function PageHero({ title, subtitle, description, breadcrumbs, ch
             </p>
           )}
           {description && (
-            <p className="text-body-lg text-[#565E69]">
+            <p className="text-body-lg text-[#22282F]">
               {description}
             </p>
           )}

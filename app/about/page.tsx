@@ -13,20 +13,20 @@ export default function AboutPage() {
       <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#FAF8F4]">
         <div className="absolute inset-0">
           <img src="/about-hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover photo-light" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] via-[#FAF8F4]/88 to-[#FAF8F4]/25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4] via-transparent to-[#FAF8F4]/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] from-15% via-[#FAF8F4]/80 via-55% to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4]/70 via-transparent to-transparent" />
         </div>
         <div className="relative z-10 w-full pb-16 px-5 md:px-8">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex items-center gap-2 text-sm text-[#6B7480] mb-8">
+            <div className="flex items-center gap-2 text-sm text-[#3B434C] mb-8">
               <Link href="/" className="hover:text-[#0E6F66] transition-colors">Home</Link>
               <ChevronRight size={14} />
-              <span className="text-[#2B3138] font-medium">About Us</span>
+              <span className="text-[#14181D] font-medium">About Us</span>
             </div>
-            <h1 className="text-h1 font-bold text-[#2B3138] leading-[1.1] mb-4">
+            <h1 className="text-h1 font-bold text-[#14181D] leading-[1.1] mb-4">
               Our Journey
             </h1>
-            <p className="text-body-lg text-[#565E69] max-w-lg">
+            <p className="text-body-lg text-[#22282F] max-w-lg">
               Building India&apos;s Most Trusted Talent Solutions Partner Since 2008
             </p>
           </div>
@@ -43,15 +43,15 @@ export default function AboutPage() {
                 const IconComponent = timelineIcons[idx] || Flag
                 return (
                   <div key={idx} className="flex flex-col items-center text-center">
-                    <div className="px-2.5 py-1 bg-[#2B3138] text-white text-[10px] font-semibold rounded-full mb-2.5 uppercase tracking-wider">
+                    <div className="px-2.5 py-1 bg-[#14181D] text-white text-[11px] font-semibold rounded-full mb-2.5 uppercase tracking-wider">
                       {item.year}
                     </div>
                     <div className="w-11 h-11 rounded-full bg-[#E8F4F1] border-2 border-white shadow-md flex items-center justify-center text-[#0E6F66] mb-3">
                       <IconComponent size={18} />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#2B3138] mb-1.5">{item.title}</h4>
-                      <p className="text-xs text-[#565E69] leading-relaxed max-w-[220px] mx-auto">
+                      <h4 className="text-sm font-bold text-[#14181D] mb-1.5">{item.title}</h4>
+                      <p className="text-xs text-[#22282F] leading-relaxed max-w-[220px] mx-auto">
                         {item.description}
                       </p>
                     </div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
       <section className="py-12 md:py-16 px-5 md:px-8 bg-[#FAF8F4]">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-h2 font-bold text-[#2B3138] mb-3">Vision &amp; Mission</h2>
+            <h2 className="text-h2 font-bold text-[#14181D] mb-3">Vision &amp; Mission</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="flex gap-3.5 items-start p-6 bg-white rounded-[6px] border border-gray-200 shadow-sm">
@@ -75,8 +75,8 @@ export default function AboutPage() {
                 <Eye size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#2B3138] mb-2">Our Vision</h3>
-                <p className="text-sm text-[#565E69] leading-relaxed">{siteData.vision}</p>
+                <h3 className="text-lg font-bold text-[#14181D] mb-2">Our Vision</h3>
+                <p className="text-sm text-[#22282F] leading-relaxed">{siteData.vision}</p>
               </div>
             </div>
             <div className="flex gap-3.5 items-start p-6 bg-white rounded-[6px] border border-gray-200 shadow-sm">
@@ -84,8 +84,8 @@ export default function AboutPage() {
                 <Target size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#2B3138] mb-2">Our Mission</h3>
-                <p className="text-sm text-[#565E69] leading-relaxed">{siteData.mission}</p>
+                <h3 className="text-lg font-bold text-[#14181D] mb-2">Our Mission</h3>
+                <p className="text-sm text-[#22282F] leading-relaxed">{siteData.mission}</p>
               </div>
             </div>
           </div>

@@ -57,11 +57,11 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }, [])
 
-  // Auto scroll every 4.5 seconds continuously
+  // Auto scroll every 9 seconds continuously
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 4500)
+    }, 9000)
     return () => clearInterval(timer)
   }, [])
 
@@ -80,7 +80,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="absolute inset-0 z-0"
         >
           <img
@@ -91,9 +91,10 @@ export default function Hero() {
             alt="Corporate Hero Background"
             className="w-full h-full object-cover object-center photo-light"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] via-[#FAF8F4]/90 to-[#FAF8F4]/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4] via-[#FAF8F4]/25 to-[#FAF8F4]/55" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#E8F4F1]/40 via-transparent to-[#FDF3E3]/40" />
+          {/* A light scrim behind the copy only — kept just strong enough to hold
+              the text, and clear of the image from ~65% across. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4]/92 via-[#FAF8F4]/65 via-48% to-transparent to-78%" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4]/45 via-transparent to-transparent" />
         </motion.div>
       </AnimatePresence>
 
@@ -106,7 +107,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.8 }}
               className="space-y-5 md:space-y-6"
             >
               {/* Badge */}
@@ -118,7 +119,7 @@ export default function Hero() {
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#2B3138] tracking-tight whitespace-pre-line leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#14181D] tracking-tight whitespace-pre-line leading-[1.1]">
                 {slide.title}
               </h1>
 
@@ -129,7 +130,7 @@ export default function Hero() {
               )}
 
               {/* Description */}
-              <div className="text-body-lg text-[#565E69] leading-relaxed font-light max-w-2xl space-y-3">
+              <div className="text-body-lg text-[#22282F] leading-relaxed font-light max-w-2xl space-y-3">
                 {slide.paragraphs.map((p, idx) => (
                   <p key={idx}>{p}</p>
                 ))}
@@ -155,7 +156,7 @@ export default function Hero() {
         </div>
 
         {/* Carousel Navigation Controls */}
-        <div className="mt-10 md:mt-12 pt-6 border-t border-[#2B3138]/12 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-10 md:mt-12 pt-6 border-t border-[#14181D]/12 flex flex-wrap items-center justify-between gap-4">
           {/* Progress Indicators / Dots */}
           <div className="flex items-center gap-3">
             {slides.map((_, idx) => (
@@ -164,11 +165,11 @@ export default function Hero() {
                 onClick={() => setCurrentSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`relative h-2 rounded-full transition-all duration-500 ${
-                  currentSlide === idx ? 'w-10 bg-[#0E6F66]' : 'w-2 bg-[#2B3138]/20 hover:bg-[#2B3138]/40'
+                  currentSlide === idx ? 'w-10 bg-[#0E6F66]' : 'w-2 bg-[#14181D]/20 hover:bg-[#14181D]/40'
                 }`}
               />
             ))}
-            <span className="ml-2 text-xs font-mono text-[#6B7480]">
+            <span className="ml-2 text-xs font-mono text-[#3B434C]">
               0{currentSlide + 1} / 0{slides.length}
             </span>
           </div>
@@ -178,14 +179,14 @@ export default function Hero() {
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
-              className="w-11 h-11 rounded-full bg-white/85 border border-[#E6E2DB] hover:border-[#0E6F66] hover:bg-[#E8F4F1] text-[#2B3138] flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+              className="w-11 h-11 rounded-full bg-white/85 border border-[#E6E2DB] hover:border-[#0E6F66] hover:bg-[#E8F4F1] text-[#14181D] flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next Slide"
-              className="w-11 h-11 rounded-full bg-white/85 border border-[#E6E2DB] hover:border-[#0E6F66] hover:bg-[#E8F4F1] text-[#2B3138] flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+              className="w-11 h-11 rounded-full bg-white/85 border border-[#E6E2DB] hover:border-[#0E6F66] hover:bg-[#E8F4F1] text-[#14181D] flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
             >
               <ChevronRight size={18} />
             </button>

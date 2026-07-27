@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${manrope.variable} ${jost.variable} scroll-smooth`}>
-      <body className="font-body antialiased bg-white text-[#2B3138]">
+      <body className="font-body antialiased bg-white text-[#14181D]">
         <Layout>{children}</Layout>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

@@ -24,7 +24,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-[#F5F1E9] text-[#2B3138]">
+    <footer className="bg-[#F5F1E9] text-[#14181D]">
       {/* Main Footer Content */}
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 pt-14 md:pt-18 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6">
@@ -34,7 +34,7 @@ export default function Footer() {
               <img src={siteData.logo} alt={siteData.company} className="h-24 w-auto" />
             </div>
 
-            <p className="text-[#565E69] text-sm leading-relaxed mb-5 max-w-sm">
+            <p className="text-[#22282F] text-sm leading-relaxed mb-5 max-w-sm">
               A trusted talent solutions partner serving organizations across multiple sectors since {siteData.founded}. Building teams and shaping leaders across India.
             </p>
 
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Quick Links - 2 columns */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#2B3138] mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#14181D] mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2.5">
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-[#565E69] text-sm hover:text-[#0E6F66] transition-colors"
+                    className="text-[#22282F] text-sm hover:text-[#0E6F66] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
 
           {/* Services - 3 columns */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#2B3138] mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#14181D] mb-4">
               Our Services
             </h4>
             <ul className="space-y-2.5">
@@ -97,7 +97,7 @@ export default function Footer() {
                 <li key={service}>
                   <Link
                     href="/services"
-                    className="text-[#565E69] text-sm hover:text-[#0E6F66] transition-colors"
+                    className="text-[#22282F] text-sm hover:text-[#0E6F66] transition-colors"
                   >
                     {service}
                   </Link>
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Contact Info - 3 columns */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#2B3138] mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#14181D] mb-4">
               Contact Us
             </h4>
 
@@ -119,8 +119,8 @@ export default function Footer() {
                   <MapPin size={14} className="text-[#0E6F66]" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-[#2B3138] mb-0.5">Head Office</p>
-                  <p className="text-xs text-[#565E69] leading-relaxed">
+                  <p className="text-xs font-semibold text-[#14181D] mb-0.5">Head Office</p>
+                  <p className="text-xs text-[#22282F] leading-relaxed">
                     39, Anand Shopping Complex<br />
                     (Opp. Hotel Taj), Sector 17 A<br />
                     Chandigarh
@@ -133,7 +133,7 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-white rounded-[6px] flex items-center justify-center flex-shrink-0 shadow-sm">
                   <Phone size={14} className="text-[#0E6F66]" />
                 </div>
-                <a href="tel:+919815087070" className="text-sm text-[#565E69] hover:text-[#0E6F66] transition-colors">
+                <a href="tel:+919815087070" className="text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors">
                   +91 98150 87070
                 </a>
               </div>
@@ -143,18 +143,18 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-white rounded-[6px] flex items-center justify-center flex-shrink-0 shadow-sm">
                   <Mail size={14} className="text-[#0E6F66]" />
                 </div>
-                <a href="mailto:support@placewellcareers.com" className="text-xs text-[#565E69] hover:text-[#0E6F66] transition-colors break-all">
+                <a href="mailto:support@placewellcareers.com" className="text-xs text-[#22282F] hover:text-[#0E6F66] transition-colors break-all">
                   support@placewellcareers.com
                 </a>
               </div>
 
               {/* Business Hours */}
               <div className="pt-3 border-t border-[#0E6F66]/15">
-                <p className="text-xs text-[#565E69]">
-                  <span className="text-[#2B3138] font-medium">Mon - Fri:</span> 9:00 AM - 6:00 PM
+                <p className="text-xs text-[#22282F]">
+                  <span className="text-[#14181D] font-medium">Mon - Fri:</span> 9:00 AM - 6:00 PM
                 </p>
-                <p className="text-xs text-[#565E69]">
-                  <span className="text-[#2B3138] font-medium">Saturday:</span> 9:00 AM - 1:00 PM
+                <p className="text-xs text-[#22282F]">
+                  <span className="text-[#14181D] font-medium">Saturday:</span> 9:00 AM - 1:00 PM
                 </p>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-[#0E6F66]/15">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#6B7480]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#3B434C]">
             <p>&copy; {currentYear} {siteData.company}. All rights reserved.</p>
             <div className="flex items-center gap-5">
               <Link href="#" className="hover:text-[#0E6F66] transition-colors">Privacy Policy</Link>

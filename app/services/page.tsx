@@ -176,22 +176,22 @@ export default function ServicesPage() {
       <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#FAF8F4]">
         <div className="absolute inset-0">
           <img src="/services-hero-bg.png" alt="Placewell Careers Services" className="w-full h-full object-cover photo-soft" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] via-[#FAF8F4]/88 to-[#FAF8F4]/25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4] via-transparent to-[#FAF8F4]/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] from-15% via-[#FAF8F4]/80 via-55% to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4]/70 via-transparent to-transparent" />
         </div>
 
         <div className="relative z-10 w-full pb-16 px-5 md:px-8">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex items-center gap-2 text-sm text-[#6B7480] mb-8">
+            <div className="flex items-center gap-2 text-sm text-[#3B434C] mb-8">
               <Link href="/" className="hover:text-[#0E6F66] transition-colors">Home</Link>
               <ChevronRight size={14} />
-              <span className="text-[#2B3138] font-medium">Our Services</span>
+              <span className="text-[#14181D] font-medium">Our Services</span>
             </div>
 
-            <h1 className="text-h1 font-bold text-[#2B3138] leading-[1.1] mb-4">
+            <h1 className="text-h1 font-bold text-[#14181D] leading-[1.1] mb-4">
               Strategic Talent Solutions<br />Built for Modern Businesses.
             </h1>
-            <p className="text-body-lg text-[#565E69] max-w-lg">
+            <p className="text-body-lg text-[#22282F] max-w-lg">
               End-to-end recruitment and talent solutions designed to help organizations build high-performing teams.
             </p>
           </div>
@@ -222,11 +222,11 @@ export default function ServicesPage() {
                     {service.subtitle}
                   </span>
 
-                  <h2 className="text-2xl md:text-4xl  font-bold text-[#2B3138] mb-5">
+                  <h2 className="text-2xl md:text-4xl  font-bold text-[#14181D] mb-5">
                     {service.title}
                   </h2>
 
-                  <p className="text-body-lg text-[#565E69] leading-relaxed mb-8">
+                  <p className="text-body-lg text-[#22282F] leading-relaxed mb-8">
                     {service.description}
                   </p>
 
@@ -237,7 +237,7 @@ export default function ServicesPage() {
                         <div className="w-5 h-5 bg-[#0E6F66] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <CheckCircle2 size={12} className="text-white" />
                         </div>
-                        <span className="text-[15px] text-[#565E69]">{feature}</span>
+                        <span className="text-[16px] text-[#22282F]">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -259,7 +259,7 @@ export default function ServicesPage() {
                         alt={service.title} 
                         className="absolute inset-0 w-full h-full object-cover" 
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#2B3138]/75 via-[#2B3138]/15 to-transparent flex flex-col justify-end p-8 text-white">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#14181D]/75 via-[#14181D]/15 to-transparent flex flex-col justify-end p-8 text-white">
                         <h3 className="text-xl font-bold mb-1">{service.title.split('(')[0].trim()}</h3>
                         <p className="text-sm text-[#E6E2DB]">{service.subtitle}</p>
                       </div>
@@ -267,10 +267,10 @@ export default function ServicesPage() {
 
                     {/* Floating Benefits Card */}
                     <div className="absolute -bottom-6 -right-6 bg-white rounded-[6px] shadow-xl p-5 max-w-[200px] hidden md:block">
-                      <div className="text-xs text-[#6B7480] font-semibold uppercase tracking-wider mb-2">Key Benefits</div>
+                      <div className="text-xs text-[#3B434C] font-semibold uppercase tracking-wider mb-2">Key Benefits</div>
                       <div className="space-y-1.5">
                         {(service.features ?? []).slice(0, 3).map((benefit, bIdx) => (
-                          <div key={bIdx} className="flex items-center gap-2 text-xs text-[#565E69]">
+                          <div key={bIdx} className="flex items-center gap-2 text-xs text-[#22282F]">
                             <div className="w-1.5 h-1.5 bg-[#0E6F66] rounded-full flex-shrink-0" />
                             <span className="line-clamp-1">{benefit}</span>
                           </div>
@@ -302,10 +302,10 @@ export default function ServicesPage() {
             <span className="text-[#0E6F66] text-xs font-bold uppercase tracking-wider block mb-3">
               OUR RECRUITMENT PROCESS
             </span>
-            <h2 className="text-4xl md:text-[52px] font-bold text-[#2B3138] leading-tight mb-4">
+            <h2 className="text-4xl md:text-[52px] font-bold text-[#14181D] leading-tight mb-4">
               Our Proven Recruitment Process
             </h2>
-            <p className="text-[17px] text-[#565E69] leading-relaxed">
+            <p className="text-[18px] text-[#22282F] leading-relaxed">
               A structured hiring methodology designed to deliver exceptional talent with speed, precision, and quality.
             </p>
           </div>
@@ -322,17 +322,17 @@ export default function ServicesPage() {
                     alt="Placewell Recruitment Team Collaboration"
                     className="w-full h-full object-cover object-center"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2B3138]/30 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#14181D]/30 via-transparent to-transparent" />
                 </div>
 
                 {/* Floating Experience Badge */}
-                <div className="absolute -bottom-6 -right-6 md:right-6 bg-white text-[#2B3138] border border-[#E6E2DB] rounded-full p-6 shadow-2xl flex items-center gap-3 transform hover:scale-105 transition-transform duration-300">
+                <div className="absolute -bottom-6 -right-6 md:right-6 bg-white text-[#14181D] border border-[#E6E2DB] rounded-full p-6 shadow-2xl flex items-center gap-3 transform hover:scale-105 transition-transform duration-300">
                   <div className="w-12 h-12 rounded-full bg-[#0E6F66] flex items-center justify-center text-white font-bold text-lg">
                     18+
                   </div>
                   <div>
-                    <div className="font-bold text-sm tracking-tight text-[#2B3138] leading-tight">Years</div>
-                    <div className="text-xs text-[#6B7480]">Hiring Experience</div>
+                    <div className="font-bold text-sm tracking-tight text-[#14181D] leading-tight">Years</div>
+                    <div className="text-xs text-[#3B434C]">Hiring Experience</div>
                   </div>
                 </div>
               </div>
@@ -373,7 +373,7 @@ export default function ServicesPage() {
                       <div className="flex-1 bg-white border border-[#E6E2DB] rounded-[8px] p-6 hover:border-[#0E6F66]/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative">
                         {/* Number Badge and Duration Row */}
                         <div className="flex items-center justify-between mb-4">
-                          <span className="text-[20px] font-bold text-[#98A0AB] group-hover:text-[#0E6F66] transition-colors duration-300 leading-none">
+                          <span className="text-[20px] font-bold text-[#5E6670] group-hover:text-[#0E6F66] transition-colors duration-300 leading-none">
                             {step.number}
                           </span>
                           <span className="px-3 py-1 bg-[#E8F4F1] text-[#0E6F66] text-xs font-semibold rounded-full uppercase tracking-wider">
@@ -382,12 +382,12 @@ export default function ServicesPage() {
                         </div>
 
                         {/* Title (28px) */}
-                        <h3 className="text-xl md:text-[28px] font-bold text-[#2B3138] leading-snug mb-2 group-hover:text-[#0E6F66] transition-colors duration-300">
+                        <h3 className="text-xl md:text-[28px] font-bold text-[#14181D] leading-snug mb-2 group-hover:text-[#0E6F66] transition-colors duration-300">
                           {step.title}
                         </h3>
 
                         {/* Description (17px) */}
-                        <p className="text-[17px] text-[#565E69] leading-relaxed mb-4">
+                        <p className="text-[18px] text-[#22282F] leading-relaxed mb-4">
                           {step.description}
                         </p>
 
@@ -419,10 +419,10 @@ export default function ServicesPage() {
               <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">Industries</span>
               <div className="w-8 h-[2px] bg-[#0E6F66]" />
             </div>
-            <h2 className="text-2xl md:text-4xl  font-bold text-[#2B3138] mb-4">
+            <h2 className="text-2xl md:text-4xl  font-bold text-[#14181D] mb-4">
               Industries We Serve
             </h2>
-            <p className="text-body-lg text-[#6B7480] max-w-2xl mx-auto">
+            <p className="text-body-lg text-[#3B434C] max-w-2xl mx-auto">
               Specialized recruitment across India&apos;s fastest growing sectors
             </p>
           </div>
@@ -438,7 +438,7 @@ export default function ServicesPage() {
                   <div className={`w-16 h-16 ${industry.color} rounded-[6px] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon size={28} />
                   </div>
-                  <h3 className="text-sm font-bold text-[#2B3138]">{industry.name}</h3>
+                  <h3 className="text-sm font-bold text-[#14181D]">{industry.name}</h3>
                 </div>
               )
             })}
@@ -457,7 +457,7 @@ export default function ServicesPage() {
               <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">Why Us</span>
               <div className="w-8 h-[2px] bg-[#0E6F66]" />
             </div>
-            <h2 className="text-2xl md:text-4xl  font-bold text-[#2B3138] mb-4">
+            <h2 className="text-2xl md:text-4xl  font-bold text-[#14181D] mb-4">
               Why Choose Placewell
             </h2>
           </div>
@@ -476,24 +476,24 @@ export default function ServicesPage() {
               <div className="w-14 h-14 bg-[#E8F4F1] rounded-[6px] flex items-center justify-center mb-5 group-hover:bg-[#0E6F66] transition-colors">
                 <CheckCircle2 size={28} className="text-[#0E6F66] group-hover:text-white transition-colors" />
               </div>
-              <div className="text-4xl font-bold text-[#2B3138] mb-1">10,000+</div>
-              <div className="text-sm text-[#6B7480]">Placements</div>
+              <div className="text-4xl font-bold text-[#14181D] mb-1">10,000+</div>
+              <div className="text-sm text-[#3B434C]">Placements</div>
             </div>
 
             <div className="bg-white rounded-[6px] p-8 border border-gray-200 hover:shadow-xl transition-shadow group">
               <div className="w-14 h-14 bg-[#E8F4F1] rounded-[6px] flex items-center justify-center mb-5 group-hover:bg-[#0E6F66] transition-colors">
                 <Award size={28} className="text-[#0E6F66] group-hover:text-white transition-colors" />
               </div>
-              <div className="text-4xl font-bold text-[#2B3138] mb-1">95%</div>
-              <div className="text-sm text-[#6B7480]">Offer Acceptance</div>
+              <div className="text-4xl font-bold text-[#14181D] mb-1">95%</div>
+              <div className="text-sm text-[#3B434C]">Offer Acceptance</div>
             </div>
 
             <div className="bg-white rounded-[6px] p-8 border border-gray-200 hover:shadow-xl transition-shadow group">
               <div className="w-14 h-14 bg-[#E8F4F1] rounded-[6px] flex items-center justify-center mb-5 group-hover:bg-[#0E6F66] transition-colors">
                 <Users size={28} className="text-[#0E6F66] group-hover:text-white transition-colors" />
               </div>
-              <div className="text-4xl font-bold text-[#2B3138] mb-1">50+</div>
-              <div className="text-sm text-[#6B7480]">Recruitment Experts</div>
+              <div className="text-4xl font-bold text-[#14181D] mb-1">50+</div>
+              <div className="text-sm text-[#3B434C]">Recruitment Experts</div>
             </div>
 
             <div className="md:col-span-2 bg-white rounded-[6px] p-8 border border-gray-200 hover:shadow-xl transition-shadow">
@@ -502,8 +502,8 @@ export default function ServicesPage() {
                   <Target size={28} className="text-[#0E6F66]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#2B3138] mb-2">Leadership Hiring</h3>
-                  <p className="text-[#6B7480]">Specialized executive search for senior management and leadership positions across industries.</p>
+                  <h3 className="text-xl font-bold text-[#14181D] mb-2">Leadership Hiring</h3>
+                  <p className="text-[#3B434C]">Specialized executive search for senior management and leadership positions across industries.</p>
                 </div>
               </div>
             </div>
@@ -531,19 +531,19 @@ export default function ServicesPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             <div className="text-center">
               <AnimatedCounter value={18} suffix="+" />
-              <div className="text-[#565E69] mt-2 font-medium">Years</div>
+              <div className="text-[#22282F] mt-2 font-medium">Years</div>
             </div>
             <div className="text-center">
               <AnimatedCounter value={10000} suffix="+" />
-              <div className="text-[#565E69] mt-2 font-medium">Placements</div>
+              <div className="text-[#22282F] mt-2 font-medium">Placements</div>
             </div>
             <div className="text-center">
               <AnimatedCounter value={95} suffix="%" />
-              <div className="text-[#565E69] mt-2 font-medium">Offer Acceptance</div>
+              <div className="text-[#22282F] mt-2 font-medium">Offer Acceptance</div>
             </div>
             <div className="text-center">
               <AnimatedCounter value={50} suffix="+" />
-              <div className="text-[#565E69] mt-2 font-medium">Experts</div>
+              <div className="text-[#22282F] mt-2 font-medium">Experts</div>
             </div>
           </div>
         </div>
@@ -560,7 +560,7 @@ export default function ServicesPage() {
               <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">FAQ</span>
               <div className="w-8 h-[2px] bg-[#0E6F66]" />
             </div>
-            <h2 className="text-2xl md:text-4xl  font-bold text-[#2B3138]">
+            <h2 className="text-2xl md:text-4xl  font-bold text-[#14181D]">
               Frequently Asked Questions
             </h2>
           </div>
@@ -575,7 +575,7 @@ export default function ServicesPage() {
                   onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
                   className="w-full p-6 flex items-center justify-between text-left"
                 >
-                  <span className="text-body-lg font-semibold text-[#2B3138] pr-4">{item.question}</span>
+                  <span className="text-body-lg font-semibold text-[#14181D] pr-4">{item.question}</span>
                   <ChevronDown
                     size={20}
                     className={`text-[#0E6F66] flex-shrink-0 transition-transform duration-300 ${expandedFaq === idx ? 'rotate-180' : ''}`}
@@ -583,7 +583,7 @@ export default function ServicesPage() {
                 </button>
                 {expandedFaq === idx && (
                   <div className="px-5 md:px-8 pb-6 border-t border-gray-100">
-                    <p className="text-[#6B7480] leading-relaxed pt-4">{item.answer}</p>
+                    <p className="text-[#3B434C] leading-relaxed pt-4">{item.answer}</p>
                   </div>
                 )}
               </div>
@@ -602,10 +602,10 @@ export default function ServicesPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl  font-bold text-[#2B3138] mb-5 leading-tight">
+          <h2 className="text-2xl md:text-4xl  font-bold text-[#14181D] mb-5 leading-tight">
             Ready to Build Your Next<br />Winning Team?
           </h2>
-          <p className="text-body-lg text-[#565E69] mb-8 max-w-xl mx-auto">
+          <p className="text-body-lg text-[#22282F] mb-8 max-w-xl mx-auto">
             Partner with Placewell Careers to find the exceptional talent your organization needs to succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

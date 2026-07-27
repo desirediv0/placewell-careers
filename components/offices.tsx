@@ -17,11 +17,11 @@ export default function Offices() {
             <div className="w-8 h-[2px] bg-[#0E6F66]" />
           </div>
 
-          <h2 className="text-2xl md:text-4xl  font-bold text-[#2B3138] mb-3">
+          <h2 className="text-2xl md:text-4xl  font-bold text-[#14181D] mb-3">
             Office Locations
           </h2>
 
-          <p className="text-body-lg text-[#6B7480] max-w-2xl mx-auto">
+          <p className="text-body-lg text-[#3B434C] max-w-2xl mx-auto">
             Connect with our teams across North India — dedicated professionals serving your hiring needs locally and regionally.
           </p>
         </div>
@@ -51,9 +51,9 @@ export default function Offices() {
                       <Building2 size={16} className={`${office.isHeadquarters ? 'text-white' : 'text-gray-500 group-hover:text-white'} transition-colors duration-300`} />
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-[#2B3138]">{office.city}</h3>
+                      <h3 className="text-sm font-bold text-[#14181D]">{office.city}</h3>
                       {office.isHeadquarters && (
-                        <span className="text-[9px] font-semibold text-[#0E6F66] uppercase tracking-wider">Head Office</span>
+                        <span className="text-[10px] font-semibold text-[#0E6F66] uppercase tracking-wider">Head Office</span>
                       )}
                     </div>
                   </div>
@@ -61,16 +61,16 @@ export default function Offices() {
 
                 {/* Contact Person */}
                 <div className="mb-3">
-                  <p className="text-[10px] text-[#6B7480] uppercase tracking-wider mb-0.5">Contact Person</p>
-                  <p className="text-sm font-medium text-[#4A525C]">{office.contact}</p>
+                  <p className="text-[11px] text-[#3B434C] uppercase tracking-wider mb-0.5">Contact Person</p>
+                  <p className="text-sm font-medium text-[#22282F]">{office.contact}</p>
                 </div>
 
                 {/* Address */}
                 {office.address && (
                   <div className="mb-3">
                     <div className="flex items-start gap-2">
-                      <MapPin size={12} className="text-[#6B7480] mt-0.5 flex-shrink-0" />
-                      <p className="text-xs text-[#6B7480] leading-relaxed">{office.address}</p>
+                      <MapPin size={12} className="text-[#3B434C] mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-[#3B434C] leading-relaxed">{office.address}</p>
                     </div>
                   </div>
                 )}
@@ -82,20 +82,20 @@ export default function Offices() {
                 <div className="space-y-2">
                   <a
                     href={`tel:${office.phone}`}
-                    className="flex items-center gap-2 text-sm text-[#4A525C] hover:text-[#0E6F66] transition-colors group/link"
+                    className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors group/link"
                   >
                     <div className="w-6 h-6 rounded-[4px] bg-gray-100 group-hover/link:bg-[#E8F4F1] flex items-center justify-center transition-colors">
-                      <Phone size={11} className="text-[#6B7480] group-hover/link:text-[#0E6F66]" />
+                      <Phone size={11} className="text-[#3B434C] group-hover/link:text-[#0E6F66]" />
                     </div>
                     <span className="text-xs">{office.phone}</span>
                   </a>
 
                   <a
                     href={`mailto:${office.email}`}
-                    className="flex items-center gap-2 text-sm text-[#4A525C] hover:text-[#0E6F66] transition-colors group/link"
+                    className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors group/link"
                   >
                     <div className="w-6 h-6 rounded-[4px] bg-gray-100 group-hover/link:bg-[#E8F4F1] flex items-center justify-center transition-colors">
-                      <Mail size={11} className="text-[#6B7480] group-hover/link:text-[#0E6F66]" />
+                      <Mail size={11} className="text-[#3B434C] group-hover/link:text-[#0E6F66]" />
                     </div>
                     <span className="text-xs truncate">{office.email}</span>
                   </a>

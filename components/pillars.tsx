@@ -57,10 +57,10 @@ export default function Pillars() {
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-h2 font-bold text-[#2B3138] mb-3">
+          <h2 className="text-h2 font-bold text-[#14181D] mb-3">
             Our Pillars of Success
           </h2>
-          <p className="text-body text-[#565E69] max-w-2xl mx-auto">
+          <p className="text-body text-[#22282F] max-w-2xl mx-auto">
             The key principles that drive our exceptional recruitment performance.
           </p>
         </div>
@@ -90,17 +90,17 @@ export default function Pillars() {
                 </div>
 
                 {/* Stat */}
-                <div className="text-[20px] font-bold text-[#2B3138] leading-none mb-1 tracking-tight">
+                <div className="text-[20px] font-bold text-[#14181D] leading-none mb-1 tracking-tight">
                   {pillar.stat}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[16px] font-bold text-[#2B3138] mb-3 leading-snug">
+                <h3 className="text-[17px] font-bold text-[#14181D] mb-3 leading-snug">
                   {pillar.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[16px] text-[#565E69] leading-relaxed">
+                <p className="text-[17px] text-[#22282F] leading-relaxed">
                   {pillar.description}
                 </p>
               </motion.div>
@@ -111,7 +111,7 @@ export default function Pillars() {
         {/* Bottom */}
         <div className="mt-14 text-center">
           <div className="w-12 h-[2px] bg-[#0E6F66] mx-auto mb-5" />
-          <p className="text-body text-[#565E69] italic">
+          <p className="text-body text-[#22282F] italic">
             Committed to Excellence in Recruitment &amp; Talent Solutions.
           </p>
         </div>

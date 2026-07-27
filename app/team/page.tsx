@@ -25,22 +25,22 @@ export default function TeamPage() {
       <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#FAF8F4]">
         <div className="absolute inset-0">
           <img src="/team-hero-bg.png" alt="Placewell Careers Leadership" className="w-full h-full object-cover photo-soft" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] via-[#FAF8F4]/88 to-[#FAF8F4]/25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4] via-transparent to-[#FAF8F4]/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] from-15% via-[#FAF8F4]/80 via-55% to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4]/70 via-transparent to-transparent" />
         </div>
 
         <div className="relative z-10 w-full pb-16 px-5 md:px-8">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex items-center gap-2 text-sm text-[#6B7480] mb-8">
+            <div className="flex items-center gap-2 text-sm text-[#3B434C] mb-8">
               <Link href="/" className="hover:text-[#0E6F66] transition-colors">Home</Link>
               <ChevronRight size={14} />
-              <span className="text-[#2B3138] font-medium">Team</span>
+              <span className="text-[#14181D] font-medium">Team</span>
             </div>
 
-            <h1 className="text-h1 font-bold text-[#2B3138] leading-[1.1] mb-4">
+            <h1 className="text-h1 font-bold text-[#14181D] leading-[1.1] mb-4">
               Meet The People<br />Driving Recruitment Excellence.
             </h1>
-            <p className="text-body-lg text-[#565E69] max-w-lg">
+            <p className="text-body-lg text-[#22282F] max-w-lg">
               Experienced professionals with decades of combined expertise in talent acquisition and strategic hiring across India&apos;s leading industries.
             </p>
           </div>
@@ -80,14 +80,14 @@ export default function TeamPage() {
                     </div>
 
                     <div className="p-7">
-                      <h3 className="text-xl font-bold text-[#2B3138] mb-1">{member.name}</h3>
+                      <h3 className="text-xl font-bold text-[#14181D] mb-1">{member.name}</h3>
                       <p className="text-sm font-medium text-[#0E6F66] mb-4">{member.role}</p>
                       <div className="w-10 h-[2px] bg-gray-200 mb-4" />
-                      <p className="text-[15px] text-[#6B7480] leading-relaxed mb-5 line-clamp-3">{member.bio}</p>
+                      <p className="text-[16px] text-[#3B434C] leading-relaxed mb-5 line-clamp-3">{member.bio}</p>
 
                       <div className="flex flex-wrap gap-2 mb-5">
                         {member.expertise.slice(0, 3).map((skill, skillIdx) => (
-                          <span key={skillIdx} className="px-3 py-1.5 bg-gray-100 text-[#565E69] text-xs font-medium rounded-md">
+                          <span key={skillIdx} className="px-3 py-1.5 bg-gray-100 text-[#22282F] text-xs font-medium rounded-md">
                             {skill}
                           </span>
                         ))}
@@ -113,7 +113,7 @@ export default function TeamPage() {
 
                       {isExpanded && (
                         <div className="mt-4 pt-4 border-t border-gray-100">
-                          <p className="text-[14px] text-[#6B7480] leading-relaxed">{member.bio}</p>
+                          <p className="text-[15px] text-[#3B434C] leading-relaxed">{member.bio}</p>
                           <div className="flex flex-wrap gap-2 mt-3">
                             {member.expertise.map((skill, skillIdx) => (
                               <span key={skillIdx} className="px-3 py-1.5 bg-[#E8F4F1] text-[#0E6F66] text-xs font-medium rounded-md">
@@ -142,10 +142,10 @@ export default function TeamPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Text */}
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#2B3138] mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#14181D] mb-6">
                     Team Placewell: Built on Partnerships. Driven by Expertise.
                   </h3>
-                  <p className="text-body-lg text-[#6B7480] leading-relaxed whitespace-pre-line">
+                  <p className="text-body-lg text-[#3B434C] leading-relaxed whitespace-pre-line">
                     {siteData.teamNote}
                   </p>
                 </div>
@@ -163,7 +163,7 @@ export default function TeamPage() {
       <section className="py-12 md:py-16 px-5 md:px-8 bg-white">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-h2 font-bold text-[#2B3138] mb-3">Vision &amp; Mission</h2>
+            <h2 className="text-h2 font-bold text-[#14181D] mb-3">Vision &amp; Mission</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="flex gap-3.5 items-start p-6 bg-[#FAF8F4] rounded-[6px] border border-gray-200 shadow-sm">
@@ -171,8 +171,8 @@ export default function TeamPage() {
                 <Eye size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#2B3138] mb-2">Our Vision</h3>
-                <p className="text-sm text-[#565E69] leading-relaxed">{siteData.vision}</p>
+                <h3 className="text-lg font-bold text-[#14181D] mb-2">Our Vision</h3>
+                <p className="text-sm text-[#22282F] leading-relaxed">{siteData.vision}</p>
               </div>
             </div>
             <div className="flex gap-3.5 items-start p-6 bg-[#FAF8F4] rounded-[6px] border border-gray-200 shadow-sm">
@@ -180,8 +180,8 @@ export default function TeamPage() {
                 <Target size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#2B3138] mb-2">Our Mission</h3>
-                <p className="text-sm text-[#565E69] leading-relaxed">{siteData.mission}</p>
+                <h3 className="text-lg font-bold text-[#14181D] mb-2">Our Mission</h3>
+                <p className="text-sm text-[#22282F] leading-relaxed">{siteData.mission}</p>
               </div>
             </div>
           </div>

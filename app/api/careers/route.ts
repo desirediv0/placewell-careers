@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #2B3138; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #14181D; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #0E6F66 0%, #0A5A52 100%); padding: 30px; border-radius: 12px 12px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 700;">New CV Submission</h1>
             <p style="color: #D8EFEB; margin: 8px 0 0 0; font-size: 14px;">Placewell Careers - Career Application</p>
@@ -106,33 +106,33 @@ export async function POST(request: NextRequest) {
               <h2 style="color: #0E6F66; margin: 0 0 20px 0; font-size: 18px; font-weight: 600;">Candidate Details</h2>
               <table style="width: 100%; border-collapse: collapse;">
                 <tr>
-                  <td style="padding: 8px 0; color: #6B7480; font-weight: 500; width: 140px;">Name:</td>
-                  <td style="padding: 8px 0; color: #2B3138; font-weight: 500;">${name}</td>
+                  <td style="padding: 8px 0; color: #3B434C; font-weight: 500; width: 140px;">Name:</td>
+                  <td style="padding: 8px 0; color: #14181D; font-weight: 500;">${name}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 8px 0; color: #6B7480; font-weight: 500;">Email:</td>
-                  <td style="padding: 8px 0; color: #2B3138; font-weight: 500;"><a href="mailto:${email}" style="color: #0E6F66; text-decoration: none;">${email}</a></td>
+                  <td style="padding: 8px 0; color: #3B434C; font-weight: 500;">Email:</td>
+                  <td style="padding: 8px 0; color: #14181D; font-weight: 500;"><a href="mailto:${email}" style="color: #0E6F66; text-decoration: none;">${email}</a></td>
                 </tr>
                 <tr>
-                  <td style="padding: 8px 0; color: #6B7480; font-weight: 500;">Phone:</td>
-                  <td style="padding: 8px 0; color: #2B3138; font-weight: 500;"><a href="tel:${phone}" style="color: #0E6F66; text-decoration: none;">${phone}</a></td>
+                  <td style="padding: 8px 0; color: #3B434C; font-weight: 500;">Phone:</td>
+                  <td style="padding: 8px 0; color: #14181D; font-weight: 500;"><a href="tel:${phone}" style="color: #0E6F66; text-decoration: none;">${phone}</a></td>
                 </tr>
                 <tr>
-                  <td style="padding: 8px 0; color: #6B7480; font-weight: 500;">Position:</td>
-                  <td style="padding: 8px 0; color: #2B3138; font-weight: 500;">${position}</td>
+                  <td style="padding: 8px 0; color: #3B434C; font-weight: 500;">Position:</td>
+                  <td style="padding: 8px 0; color: #14181D; font-weight: 500;">${position}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 8px 0; color: #6B7480; font-weight: 500;">Experience:</td>
-                  <td style="padding: 8px 0; color: #2B3138; font-weight: 500;">${experience}</td>
+                  <td style="padding: 8px 0; color: #3B434C; font-weight: 500;">Experience:</td>
+                  <td style="padding: 8px 0; color: #14181D; font-weight: 500;">${experience}</td>
                 </tr>
               </table>
             </div>
 
             <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid #E6E2DB; margin-bottom: 20px;">
               <h2 style="color: #0E6F66; margin: 0 0 12px 0; font-size: 18px; font-weight: 600;">CV Document</h2>
-              <p style="margin: 0 0 16px 0; color: #4A525C;">The candidate's CV has been uploaded to secure storage.</p>
+              <p style="margin: 0 0 16px 0; color: #22282F;">The candidate's CV has been uploaded to secure storage.</p>
               <a href="${cvUrl}" style="display: inline-block; background: #0E6F66; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500;">Download CV</a>
-              <p style="margin: 12px 0 0 0; font-size: 12px; color: #98A0AB;">Link expires in 7 days. File: ${cv.name} (${(cv.size / 1024).toFixed(1)} KB)</p>
+              <p style="margin: 12px 0 0 0; font-size: 12px; color: #5E6670;">Link expires in 7 days. File: ${cv.name} (${(cv.size / 1024).toFixed(1)} KB)</p>
             </div>
 
             <div style="margin-top: 24px; padding: 16px; background: #E8F4F1; border-radius: 8px; border: 1px solid #D8EFEB;">
@@ -141,7 +141,7 @@ export async function POST(request: NextRequest) {
               </p>
             </div>
           </div>
-          <p style="text-align: center; color: #98A0AB; font-size: 12px; margin-top: 20px;">
+          <p style="text-align: center; color: #5E6670; font-size: 12px; margin-top: 20px;">
             This email was sent from the Placewell Careers career application form.
           </p>
         </body>
@@ -181,28 +181,28 @@ Reply to: ${email} | Phone: ${phone}
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #2B3138; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #14181D; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #0E6F66 0%, #0A5A52 100%); padding: 30px; border-radius: 12px 12px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 700;">CV Received!</h1>
             <p style="color: #D8EFEB; margin: 8px 0 0 0; font-size: 14px;">Placewell Careers</p>
           </div>
           <div style="background: #FAF8F4; padding: 30px; border-radius: 0 0 12px 12px; border: 1px solid #E6E2DB; border-top: none;">
-            <p style="color: #4A525C; font-size: 16px;">Dear ${name},</p>
-            <p style="color: #4A525C;">Thank you for submitting your CV for the <strong>${position}</strong> position. We have received your application and our recruitment team will review your profile.</p>
-            <p style="color: #4A525C;">If your experience matches our current or upcoming requirements, we will reach out to you within <strong>5-7 business days</strong>.</p>
+            <p style="color: #22282F; font-size: 16px;">Dear ${name},</p>
+            <p style="color: #22282F;">Thank you for submitting your CV for the <strong>${position}</strong> position. We have received your application and our recruitment team will review your profile.</p>
+            <p style="color: #22282F;">If your experience matches our current or upcoming requirements, we will reach out to you within <strong>5-7 business days</strong>.</p>
             
             <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #E6E2DB; margin: 24px 0;">
               <h3 style="color: #0E6F66; margin: 0 0 12px 0; font-size: 16px;">Application Summary</h3>
-              <p style="margin: 4px 0; color: #4A525C;"><strong>Position:</strong> ${position}</p>
-              <p style="margin: 4px 0; color: #4A525C;"><strong>Experience:</strong> ${experience}</p>
-              <p style="margin: 4px 0; color: #4A525C;"><strong>CV:</strong> ${cv.name}</p>
+              <p style="margin: 4px 0; color: #22282F;"><strong>Position:</strong> ${position}</p>
+              <p style="margin: 4px 0; color: #22282F;"><strong>Experience:</strong> ${experience}</p>
+              <p style="margin: 4px 0; color: #22282F;"><strong>CV:</strong> ${cv.name}</p>
             </div>
 
-            <p style="color: #6B7480; font-size: 14px;">For any queries, you can reach us at:</p>
+            <p style="color: #3B434C; font-size: 14px;">For any queries, you can reach us at:</p>
             <p style="color: #0E6F66; font-weight: 500; margin: 8px 0;">📞 +91 98150 87070 | 📧 sandeep.grover@placewellcareers.com</p>
             
             <hr style="border: none; border-top: 1px solid #E6E2DB; margin: 24px 0;">
-            <p style="color: #98A0AB; font-size: 12px; margin: 0;">Placewell Careers | 39, Anand Shopping Complex, Sector 17 A, Chandigarh</p>
+            <p style="color: #5E6670; font-size: 12px; margin: 0;">Placewell Careers | 39, Anand Shopping Complex, Sector 17 A, Chandigarh</p>
           </div>
         </body>
       </html>

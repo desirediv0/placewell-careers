@@ -47,7 +47,7 @@ export default function Header() {
         {/* Logo + Tagline */}
         <Link href="/" className="flex items-center flex-shrink-0 gap-3">
           <img src={siteData.logo} alt={siteData.company} className="h-14 md:h-16 w-auto" />
-          {/* <span className="hidden lg:block text-[11px] font-semibold text-[#6B7480] tracking-wide leading-tight max-w-[120px]">
+          {/* <span className="hidden lg:block text-[12px] font-semibold text-[#3B434C] tracking-wide leading-tight max-w-[120px]">
             Building Teams.<br />Shaping Leaders
           </span> */}
         </Link>
@@ -63,7 +63,7 @@ export default function Header() {
                 href={route}
                 className={`relative text-sm font-medium transition-colors py-1 ${active
                   ? 'text-[#2F68AB]'
-                  : 'text-[#565E69] hover:text-[#2F68AB]'
+                  : 'text-[#22282F] hover:text-[#2F68AB]'
                   }`}
               >
                 {item}
@@ -92,7 +92,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[#2B3138] p-2 -mr-2"
+          className="lg:hidden text-[#14181D] p-2 -mr-2"
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -108,7 +108,7 @@ export default function Header() {
             </Link>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-[#2B3138] p-2 -mr-2"
+              className="text-[#14181D] p-2 -mr-2"
               aria-label="Close menu"
             >
               <X size={22} />
@@ -126,7 +126,7 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                   className={`text-xl font-semibold transition-colors ${active
                     ? 'text-[#2F68AB]'
-                    : 'text-[#2B3138] hover:text-[#2F68AB]'
+                    : 'text-[#14181D] hover:text-[#2F68AB]'
                     }`}
                 >
                   {item}

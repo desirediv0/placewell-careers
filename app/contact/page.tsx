@@ -126,22 +126,22 @@ export default function ContactPage() {
       <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#FAF8F4]">
         <div className="absolute inset-0">
           <img src="/contact-hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover photo-light" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] via-[#FAF8F4]/88 to-[#FAF8F4]/25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4] via-transparent to-[#FAF8F4]/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] from-15% via-[#FAF8F4]/80 via-55% to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4]/70 via-transparent to-transparent" />
         </div>
 
         <div className="relative z-10 w-full pb-16 px-5 md:px-8">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex items-center gap-2 text-sm text-[#6B7480] mb-8">
+            <div className="flex items-center gap-2 text-sm text-[#3B434C] mb-8">
               <Link href="/" className="hover:text-[#0E6F66] transition-colors">Home</Link>
               <ChevronRight size={14} />
-              <span className="text-[#2B3138] font-medium">Contact Us</span>
+              <span className="text-[#14181D] font-medium">Contact Us</span>
             </div>
 
-            <h1 className="text-h1 font-bold text-[#2B3138] leading-[1.1] mb-4">
+            <h1 className="text-h1 font-bold text-[#14181D] leading-[1.1] mb-4">
               Let&apos;s Build<br />Your Winning Team.
             </h1>
-            <p className="text-body-lg text-[#565E69] max-w-lg">
+            <p className="text-body-lg text-[#22282F] max-w-lg">
               Whether you&apos;re looking to hire top talent or explore career opportunities — our team is ready to help.
             </p>
           </div>
@@ -159,15 +159,15 @@ export default function ContactPage() {
                 <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
               </div>
 
-              <h2 className="text-2xl md:text-4xl font-bold text-[#2B3138] leading-[1.15] mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold text-[#14181D] leading-[1.15] mb-6">
                 Why Contact<br />Placewell?
               </h2>
 
-              <p className="text-body-lg text-[#565E69] leading-relaxed mb-6">
+              <p className="text-body-lg text-[#22282F] leading-relaxed mb-6">
                 Our recruitment process is built on understanding your unique hiring challenges. From requirement analysis to onboarding, we ensure every placement is a strategic fit for your organization.
               </p>
 
-              <p className="text-[#6B7480] leading-relaxed mb-10">
+              <p className="text-[#3B434C] leading-relaxed mb-10">
                 With 18+ years of experience and a network of 50+ recruitment professionals, we bring market intelligence, domain expertise, and a proven track record to every engagement.
               </p>
 
@@ -175,12 +175,12 @@ export default function ContactPage() {
               <div className="bg-white rounded-[6px] p-6 border border-gray-100">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock size={20} className="text-[#0E6F66]" />
-                  <h3 className="text-body font-bold text-[#2B3138]">Business Hours</h3>
+                  <h3 className="text-body font-bold text-[#14181D]">Business Hours</h3>
                 </div>
                 <div className="space-y-2 text-sm">
-                  <p className="text-[#565E69]">{siteData.businessHours.weekdays}</p>
-                  <p className="text-[#565E69]">{siteData.businessHours.saturday}</p>
-                  <p className="text-[#565E69]">{siteData.businessHours.sunday}</p>
+                  <p className="text-[#22282F]">{siteData.businessHours.weekdays}</p>
+                  <p className="text-[#22282F]">{siteData.businessHours.saturday}</p>
+                  <p className="text-[#22282F]">{siteData.businessHours.sunday}</p>
                 </div>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                   onClick={() => setActiveForm('enquiry')}
                   className={`flex-1 py-3.5 font-semibold text-sm rounded-lg transition-all ${activeForm === 'enquiry'
                     ? 'bg-[#2F68AB] text-white shadow-md'
-                    : 'text-[#6B7480] hover:text-[#2B3138]'
+                    : 'text-[#3B434C] hover:text-[#14181D]'
                     }`}
                 >
                   Corporate Enquiry
@@ -202,7 +202,7 @@ export default function ContactPage() {
                   onClick={() => setActiveForm('cv')}
                   className={`flex-1 py-3.5 font-semibold text-sm rounded-lg transition-all ${activeForm === 'cv'
                     ? 'bg-[#2F68AB] text-white shadow-md'
-                    : 'text-[#6B7480] hover:text-[#2B3138]'
+                    : 'text-[#3B434C] hover:text-[#14181D]'
                     }`}
                 >
                   Drop Your CV
@@ -217,8 +217,8 @@ export default function ContactPage() {
                       <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-5">
                         <CheckCircle size={32} className="text-green-600" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#2B3138] mb-2">Thank You!</h3>
-                      <p className="text-[#6B7480]">Your enquiry has been received. Our team will reach out within 24 hours.</p>
+                      <h3 className="text-2xl font-bold text-[#14181D] mb-2">Thank You!</h3>
+                      <p className="text-[#3B434C]">Your enquiry has been received. Our team will reach out within 24 hours.</p>
                     </div>
                   ) : (
                     <motion.form
@@ -236,12 +236,12 @@ export default function ContactPage() {
                       )}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Full Name *</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Full Name *</label>
                           <input
                             {...contactForm.register('name', { required: 'Name is required' })}
                             type="text"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="Your full name"
                           />
                           {contactForm.formState.errors.name && (
@@ -249,12 +249,12 @@ export default function ContactPage() {
                           )}
                         </div>
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Company</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Company</label>
                           <input
                             {...contactForm.register('company')}
                             type="text"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="Your company name"
                           />
                         </div>
@@ -262,7 +262,7 @@ export default function ContactPage() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Email *</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Email *</label>
                           <input
                             {...contactForm.register('email', {
                               required: 'Email is required',
@@ -270,7 +270,7 @@ export default function ContactPage() {
                             })}
                             type="email"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="your@email.com"
                           />
                           {contactForm.formState.errors.email && (
@@ -278,12 +278,12 @@ export default function ContactPage() {
                           )}
                         </div>
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Phone *</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Phone *</label>
                           <input
                             {...contactForm.register('phone', { required: 'Phone is required' })}
                             type="tel"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="+91 XXXXX XXXXX"
                           />
                           {contactForm.formState.errors.phone && (
@@ -293,12 +293,12 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-[#2B3138] mb-2">Hiring Requirement *</label>
+                        <label className="block text-sm font-semibold text-[#14181D] mb-2">Hiring Requirement *</label>
                         <input
                           {...contactForm.register('requirement', { required: 'Requirement is required' })}
                           type="text"
                           suppressHydrationWarning
-                          className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                          className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                           placeholder="e.g., 5 Software Engineers, 2 Sales Managers"
                         />
                         {contactForm.formState.errors.requirement && (
@@ -307,12 +307,12 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-[#2B3138] mb-2">Service Required</label>
+                        <label className="block text-sm font-semibold text-[#14181D] mb-2">Service Required</label>
                         <div className="relative">
                           <select
                             {...contactForm.register('service')}
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all appearance-none"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all appearance-none"
                           >
                             <option value="">Select a service</option>
                             <option value="rpo">Recruitment Process Outsourcing</option>
@@ -321,17 +321,17 @@ export default function ContactPage() {
                             <option value="leadership">Leadership & Strategic Hiring</option>
                             <option value="insights">Industry Insights</option>
                           </select>
-                          <ChevronDown size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#98A0AB] pointer-events-none" />
+                          <ChevronDown size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5E6670] pointer-events-none" />
                         </div>
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-[#2B3138] mb-2">Message *</label>
+                        <label className="block text-sm font-semibold text-[#14181D] mb-2">Message *</label>
                         <textarea
                           {...contactForm.register('message', { required: 'Message is required' })}
                           rows={4}
                           suppressHydrationWarning
-                          className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all resize-none"
+                          className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all resize-none"
                           placeholder="Tell us about your hiring needs..."
                         />
                         {contactForm.formState.errors.message && (
@@ -369,8 +369,8 @@ export default function ContactPage() {
                       <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-5">
                         <CheckCircle size={32} className="text-green-600" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#2B3138] mb-2">CV Received!</h3>
-                      <p className="text-[#6B7480]">Thank you for your interest. We&apos;ll review your profile and get back to you shortly.</p>
+                      <h3 className="text-2xl font-bold text-[#14181D] mb-2">CV Received!</h3>
+                      <p className="text-[#3B434C]">Thank you for your interest. We&apos;ll review your profile and get back to you shortly.</p>
                     </div>
                   ) : (
                     <motion.form
@@ -388,12 +388,12 @@ export default function ContactPage() {
                       )}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Full Name *</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Full Name *</label>
                           <input
                             {...cvForm.register('name', { required: 'Name is required' })}
                             type="text"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="Your full name"
                           />
                           {cvForm.formState.errors.name && (
@@ -401,7 +401,7 @@ export default function ContactPage() {
                           )}
                         </div>
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Email *</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Email *</label>
                           <input
                             {...cvForm.register('email', {
                               required: 'Email is required',
@@ -409,7 +409,7 @@ export default function ContactPage() {
                             })}
                             type="email"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="your@email.com"
                           />
                           {cvForm.formState.errors.email && (
@@ -420,12 +420,12 @@ export default function ContactPage() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Phone *</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Phone *</label>
                           <input
                             {...cvForm.register('phone', { required: 'Phone is required' })}
                             type="tel"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="+91 XXXXX XXXXX"
                           />
                           {cvForm.formState.errors.phone && (
@@ -433,12 +433,12 @@ export default function ContactPage() {
                           )}
                         </div>
                         <div>
-                          <label className="block text-sm font-semibold text-[#2B3138] mb-2">Preferred Position *</label>
+                          <label className="block text-sm font-semibold text-[#14181D] mb-2">Preferred Position *</label>
                           <input
                             {...cvForm.register('position', { required: 'Position is required' })}
                             type="text"
                             suppressHydrationWarning
-                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                            className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                             placeholder="e.g., Marketing Manager"
                           />
                           {cvForm.formState.errors.position && (
@@ -448,12 +448,12 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-[#2B3138] mb-2">Years of Experience *</label>
+                        <label className="block text-sm font-semibold text-[#14181D] mb-2">Years of Experience *</label>
                         <input
                           {...cvForm.register('experience', { required: 'Experience is required' })}
                           type="text"
                           suppressHydrationWarning
-                          className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#2B3138] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
+                          className="w-full px-4 py-3.5 bg-[#FAF8F4] border border-gray-200 text-[#14181D] placeholder:text-[#98A0AB] focus:outline-none focus:border-[#2F68AB] focus:bg-white rounded-lg transition-all"
                           placeholder="e.g., 5+ years"
                         />
                         {cvForm.formState.errors.experience && (
@@ -462,7 +462,7 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-[#2B3138] mb-2">Upload CV *</label>
+                        <label className="block text-sm font-semibold text-[#14181D] mb-2">Upload CV *</label>
                         <div className="relative">
                           <input
                             type="file"
@@ -477,8 +477,8 @@ export default function ContactPage() {
                           >
                             <Upload size={24} className="text-[#0E6F66]" />
                             <div className="text-center">
-                              <span className="text-sm font-medium text-[#2B3138] block">Drop your CV here or click to browse</span>
-                              <span className="text-xs text-[#98A0AB] mt-1 block">PDF, DOC, DOCX (Max 10MB)</span>
+                              <span className="text-sm font-medium text-[#14181D] block">Drop your CV here or click to browse</span>
+                              <span className="text-xs text-[#5E6670] mt-1 block">PDF, DOC, DOCX (Max 10MB)</span>
                             </div>
                           </label>
                         </div>
@@ -522,10 +522,10 @@ export default function ContactPage() {
               <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">Our Network</span>
               <div className="w-8 h-[2px] bg-[#0E6F66]" />
             </div>
-            <h2 className="text-2xl md:text-4xl font-bold text-[#2B3138] mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#14181D] mb-4">
               Our Office Network
             </h2>
-            <p className="text-body-lg text-[#6B7480] max-w-2xl mx-auto">
+            <p className="text-body-lg text-[#3B434C] max-w-2xl mx-auto">
               Strategically located across North India to serve clients nationwide
             </p>
           </div>
@@ -549,25 +549,25 @@ export default function ContactPage() {
                     <MapPin size={20} className="text-[#0E6F66] group-hover:text-white transition-colors" />
                   </div>
                   {office.isHeadquarters && (
-                    <span className="text-[10px] font-bold text-[#0E6F66] bg-[#E8F4F1] px-2 py-1 rounded-md uppercase tracking-wider">
+                    <span className="text-[11px] font-bold text-[#0E6F66] bg-[#E8F4F1] px-2 py-1 rounded-md uppercase tracking-wider">
                       HQ
                     </span>
                   )}
                 </div>
 
-                <h3 className="text-body-lg font-bold text-[#2B3138] mb-1">{office.city}</h3>
-                <p className="text-sm text-[#6B7480] mb-3">{office.contact}</p>
+                <h3 className="text-body-lg font-bold text-[#14181D] mb-1">{office.city}</h3>
+                <p className="text-sm text-[#3B434C] mb-3">{office.contact}</p>
 
                 {office.address && (
-                  <p className="text-xs text-[#98A0AB] mb-4 line-clamp-2">{office.address}</p>
+                  <p className="text-xs text-[#5E6670] mb-4 line-clamp-2">{office.address}</p>
                 )}
 
                 <div className="space-y-2 mb-5">
-                  <a href={`tel:${office.phone}`} className="flex items-center gap-2 text-sm text-[#565E69] hover:text-[#0E6F66] transition-colors">
+                  <a href={`tel:${office.phone}`} className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors">
                     <Phone size={13} className="flex-shrink-0" />
                     <span className="truncate">{office.phone}</span>
                   </a>
-                  <a href={`mailto:${office.email}`} className="flex items-center gap-2 text-sm text-[#565E69] hover:text-[#0E6F66] transition-colors">
+                  <a href={`mailto:${office.email}`} className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors">
                     <Mail size={13} className="flex-shrink-0" />
                     <span className="truncate">{office.email}</span>
                   </a>
@@ -576,7 +576,7 @@ export default function ContactPage() {
                 <div className="flex gap-2">
                   <a
                     href={`tel:${office.phone}`}
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#FAF8F4] hover:bg-[#0E6F66] hover:text-white text-[#565E69] text-xs font-semibold rounded-lg transition-all border border-gray-100"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#FAF8F4] hover:bg-[#0E6F66] hover:text-white text-[#22282F] text-xs font-semibold rounded-lg transition-all border border-gray-100"
                   >
                     <Phone size={12} />
                     Call
@@ -585,7 +585,7 @@ export default function ContactPage() {
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address ? `${office.address}, ${office.city}` : `${office.city}, India`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#FAF8F4] hover:bg-[#0E6F66] hover:text-white text-[#565E69] text-xs font-semibold rounded-lg transition-all border border-gray-100"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#FAF8F4] hover:bg-[#0E6F66] hover:text-white text-[#22282F] text-xs font-semibold rounded-lg transition-all border border-gray-100"
                   >
                     <MapPin size={12} />
                     Map
@@ -611,10 +611,10 @@ export default function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-4xl font-bold text-[#2B3138] mb-5 leading-tight">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#14181D] mb-5 leading-tight">
               Need Recruitment Support?
             </h2>
-            <p className="text-body-lg text-[#565E69] mb-8 max-w-xl mx-auto">
+            <p className="text-body-lg text-[#22282F] mb-8 max-w-xl mx-auto">
               Let&apos;s start the conversation. Our team is ready to help you build your winning team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

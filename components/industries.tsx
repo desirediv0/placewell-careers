@@ -45,8 +45,8 @@ export default function Industries() {
             <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">Our Expertise</span>
             <div className="w-8 h-[2px] bg-[#0E6F66]" />
           </div>
-          <h2 className="text-h2 font-bold text-[#2B3138] mb-3">Industries We Serve</h2>
-          <p className="text-body-lg text-[#6B7480] max-w-2xl mx-auto">
+          <h2 className="text-h2 font-bold text-[#14181D] mb-3">Industries We Serve</h2>
+          <p className="text-body-lg text-[#3B434C] max-w-2xl mx-auto">
             Delivering specialized recruitment solutions across India&apos;s fastest growing industries.
           </p>
         </div>
@@ -70,10 +70,10 @@ export default function Industries() {
                   <div className={`w-14 h-14 ${industry.bgColor} rounded-[6px] flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-105`}>
                     <Icon size={28} strokeWidth={1.5} className={`${industry.iconColor}`} />
                   </div>
-                  <h3 className="text-lg font-bold text-[#2B3138] mb-2">{industry.name}</h3>
-                  <p className="text-sm text-[#6B7480] leading-relaxed mb-4">{industry.description}</p>
+                  <h3 className="text-lg font-bold text-[#14181D] mb-2">{industry.name}</h3>
+                  <p className="text-sm text-[#3B434C] leading-relaxed mb-4">{industry.description}</p>
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <span className={`inline-block px-3 py-1.5 bg-gradient-to-r ${industry.color} text-white text-[11px] font-semibold rounded-full tracking-wide`}>
+                    <span className={`inline-block px-3 py-1.5 bg-gradient-to-r ${industry.color} text-white text-[12px] font-semibold rounded-full tracking-wide`}>
                       {industry.tag}
                     </span>
                     <div className={`flex items-center gap-1.5 text-sm font-medium transition-all duration-300 ${isHovered ? 'text-[#0E6F66] opacity-100' : 'text-gray-400 opacity-0'}`}>

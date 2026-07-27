@@ -17,10 +17,10 @@ export default function Services() {
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#E8F4F1] text-[#0E6F66] text-xs font-semibold rounded-full uppercase tracking-wider mb-3">
             Our Services
           </div>
-          <h2 className="text-h2 font-bold text-[#2B3138] mb-3">
+          <h2 className="text-h2 font-bold text-[#14181D] mb-3">
             Comprehensive Recruitment & Talent Solutions
           </h2>
-          <p className="text-body-lg text-[#565E69] max-w-3xl mx-auto">
+          <p className="text-body-lg text-[#22282F] max-w-3xl mx-auto">
             Tailored strategies and innovative solutions to help you attract, engage and retain the best talent.
           </p>
         </div>
@@ -39,16 +39,16 @@ export default function Services() {
                     {getIcon(service.icon)}
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#2B3138] leading-snug">{service.title}</h3>
+                    <h3 className="text-base font-bold text-[#14181D] leading-snug">{service.title}</h3>
                     <p className="text-xs text-[#0E6F66] font-semibold mt-0.5">{service.subtitle}</p>
                   </div>
                 </div>
 
-                <p className="text-sm text-[#565E69] mb-5 italic">&ldquo;{service.description}&rdquo;</p>
+                <p className="text-sm text-[#22282F] mb-5 italic">&ldquo;{service.description}&rdquo;</p>
 
                 <ul className="space-y-2.5 mb-6">
                   {service.offerings.map((offering, offeringIdx) => (
-                    <li key={offeringIdx} className="flex items-start gap-2.5 text-sm text-[#565E69]">
+                    <li key={offeringIdx} className="flex items-start gap-2.5 text-sm text-[#22282F]">
                       <span className="w-1.5 h-1.5 bg-[#0E6F66] rounded-full mt-2 flex-shrink-0" />
                       <span>{offering}</span>
                     </li>

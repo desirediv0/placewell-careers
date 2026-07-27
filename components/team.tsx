@@ -18,7 +18,7 @@ export default function Team() {
             <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">Our Team</span>
             <div className="w-8 h-[2px] bg-[#0E6F66]" />
           </div>
-          <h2 className="text-h2 font-bold text-[#2B3138] mb-3">Our Team</h2>
+          <h2 className="text-h2 font-bold text-[#14181D] mb-3">Our Team</h2>
         </div>
 
         {/* Team Grid */}
@@ -48,14 +48,14 @@ export default function Team() {
 
                 {/* Content Section */}
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-[#2B3138] mb-1">{member.name}</h3>
+                  <h3 className="text-lg font-bold text-[#14181D] mb-1">{member.name}</h3>
                   <p className="text-sm font-medium text-[#0E6F66] mb-3">{member.role}</p>
                   <div className="w-8 h-[2px] bg-gray-200 mb-3" />
-                  <p className="text-sm text-[#6B7480] leading-relaxed mb-4 line-clamp-3">{member.bio}</p>
+                  <p className="text-sm text-[#3B434C] leading-relaxed mb-4 line-clamp-3">{member.bio}</p>
 
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {member.expertise.slice(0, 3).map((skill, skillIdx) => (
-                      <span key={skillIdx} className="px-2.5 py-1 bg-gray-100 text-[#565E69] text-xs font-medium rounded-[4px]">
+                      <span key={skillIdx} className="px-2.5 py-1 bg-gray-100 text-[#22282F] text-xs font-medium rounded-[4px]">
                         {skill}
                       </span>
                     ))}
@@ -80,7 +80,7 @@ export default function Team() {
 
                   {isExpanded && (
                     <div className="mt-3 pt-3 border-t border-gray-100">
-                      <p className="text-sm text-[#6B7480] leading-relaxed">{member.bio}</p>
+                      <p className="text-sm text-[#3B434C] leading-relaxed">{member.bio}</p>
                       <div className="flex flex-wrap gap-1.5 mt-2.5">
                         {member.expertise.map((skill, skillIdx) => (
                           <span key={skillIdx} className="px-2.5 py-1 bg-[#E8F4F1] text-[#0E6F66] text-xs font-medium rounded-[4px]">
@@ -101,9 +101,9 @@ export default function Team() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Side - Text */}
             <div>
-              <h3 className="text-xl font-bold text-[#2B3138] mb-4">Team Placewell: Built on Partnerships. Driven by Expertise.</h3>
+              <h3 className="text-xl font-bold text-[#14181D] mb-4">Team Placewell: Built on Partnerships. Driven by Expertise.</h3>
               {siteData.teamNote.split('\n\n').map((paragraph, idx) => (
-                <p key={idx} className="text-sm text-[#565E69] leading-relaxed mb-3 last:mb-0">
+                <p key={idx} className="text-sm text-[#22282F] leading-relaxed mb-3 last:mb-0">
                   {paragraph}
                 </p>
               ))}
