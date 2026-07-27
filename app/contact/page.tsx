@@ -123,25 +123,33 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#FAF8F4]">
+      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#0B0F14]">
         <div className="absolute inset-0">
-          <img src="/contact-hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover photo-light" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F4] from-15% via-[#FAF8F4]/80 via-55% to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F4]/70 via-transparent to-transparent" />
+          <img src="/contact-hero-bg.png" alt="Placewell Careers Office" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#0B0F14]/48" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/90 via-[#0B0F14]/20 to-[#0B0F14]/75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0E6F66]/35 via-transparent to-[#C9821F]/28 mix-blend-soft-light" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(11,15,20,0.30) 0%, rgba(11,15,20,0.62) 100%)',
+            }}
+          />
         </div>
 
         <div className="relative z-10 w-full pb-16 px-5 md:px-8">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex items-center gap-2 text-sm text-[#3B434C] mb-8">
-              <Link href="/" className="hover:text-[#0E6F66] transition-colors">Home</Link>
+            <div className="flex items-center gap-2 text-sm text-white/70 mb-8">
+              <Link href="/" className="hover:text-[#5EC4B6] transition-colors">Home</Link>
               <ChevronRight size={14} />
-              <span className="text-[#14181D] font-medium">Contact Us</span>
+              <span className="text-white font-medium">Contact Us</span>
             </div>
 
-            <h1 className="text-h1 font-bold text-[#14181D] leading-[1.1] mb-4">
+            <h1 className="text-h1 font-bold text-white leading-[1.1] mb-4">
               Let&apos;s Build<br />Your Winning Team.
             </h1>
-            <p className="text-body-lg text-[#22282F] max-w-lg">
+            <p className="text-body-lg text-white/80 max-w-lg">
               Whether you&apos;re looking to hire top talent or explore career opportunities — our team is ready to help.
             </p>
           </div>
