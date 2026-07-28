@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "cross-env AWS_SDK_JS_SUPPRESS_NODE_DEPRECATION_WARNING=1 NODE_ENV=production node server.mjs",
+    "start": "cross-env NODE_OPTIONS=--no-warnings AWS_SDK_JS_SUPPRESS_NODE_DEPRECATION_WARNING=1 NODE_ENV=production node server.mjs",
     "lint": "eslint ."
   },
   "dependencies": {
