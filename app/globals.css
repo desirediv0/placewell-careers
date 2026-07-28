@@ -7,6 +7,14 @@
 @theme inline {
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
+  /* Body copy runs one step larger than the Tailwind default. Heading-scale
+     sizes (text-lg and up) are deliberately left alone. */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.15rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.4rem;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.65rem;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -47,40 +55,53 @@
   --radius-4xl: 6px;
 }
 
+/*
+  Palette — light, warm-neutral base. Blue is reserved for actions only;
+  teal carries the ambient accent work and gold adds warmth.
+
+  Surfaces   #FFFFFF white · #FAF8F4 sand · #F6F2EA sand-deep · #F5F1E9 footer
+             #F1F8F6 mint tint · #FDF7EF warm tint · #E8F4F1 teal tint
+  Ink        #14181D headings · #22282F body · #3B434C secondary · #5E6670 captions
+             #98A0AB is reserved for input placeholders only
+  Border     #E6E2DB
+  Blue       #2F68AB actions · #27578F hover · #EDF3F9 tint
+  Teal       #0E6F66 accent text/rules · #12857A solid · #E8F4F1 tint
+  Gold       #C9821F · #E3A33F · #FDF3E3 tint · #3D2B0F ink on gold
+*/
 :root {
   color-scheme: light;
   --background: #FFFFFF;
-  --foreground: #1F2937;
+  --foreground: #2B3138;
   --card: #FFFFFF;
-  --card-foreground: #1F2937;
+  --card-foreground: #2B3138;
   --popover: #FFFFFF;
-  --popover-foreground: #1F2937;
-  --primary: #223A8F;
+  --popover-foreground: #2B3138;
+  --primary: #2F68AB;
   --primary-foreground: #FFFFFF;
-  --secondary: #2D6CDF;
+  --secondary: #0E6F66;
   --secondary-foreground: #FFFFFF;
-  --muted: #F5F7FA;
-  --muted-foreground: #6B7280;
-  --accent: #18A4F5;
-  --accent-foreground: #1F2937;
+  --muted: #FAF8F4;
+  --muted-foreground: #6B7480;
+  --accent: #E8F4F1;
+  --accent-foreground: #0E6F66;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #E5E7EB;
-  --input: #F8FAFC;
-  --ring: #223A8F;
-  --chart-1: #223A8F;
-  --chart-2: #2D6CDF;
-  --chart-3: #18A4F5;
-  --chart-4: #4A4CBF;
-  --chart-5: #6B7280;
+  --border: #E6E2DB;
+  --input: #FAF8F4;
+  --ring: #2F68AB;
+  --chart-1: #0E6F66;
+  --chart-2: #2F68AB;
+  --chart-3: #C9821F;
+  --chart-4: #12857A;
+  --chart-5: #6B7480;
   --radius: 6px;
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #1F2937;
-  --sidebar-primary: #223A8F;
+  --sidebar-foreground: #2B3138;
+  --sidebar-primary: #2F68AB;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F5F7FA;
-  --sidebar-accent-foreground: #223A8F;
-  --sidebar-border: #E5E7EB;
-  --sidebar-ring: #223A8F;
+  --sidebar-accent: #FAF8F4;
+  --sidebar-accent-foreground: #0E6F66;
+  --sidebar-border: #E6E2DB;
+  --sidebar-ring: #2F68AB;
 }
 
 @layer base {
@@ -101,6 +122,11 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
+@utility text-h1 {
+  font-size: clamp(2.25rem, 1.1rem + 2.4vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
 @utility text-h2 {
   font-size: clamp(2rem, 1rem + 2vw, 3.25rem);
   line-height: 1.15;
@@ -116,16 +142,33 @@
   line-height: 1.25;
 }
 @utility text-body-lg {
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.1875rem;
+  line-height: 1.65;
 }
 @utility text-body {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 @utility text-body-sm {
-  font-size: 0.875rem;
-  line-height: 1.5;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+/* Photography — the stock imagery is shot at night under blue lighting.
+   These lift it to a light, near-neutral key so it reads as part of a light page.
+   photo-light: for the dark night scenes. photo-soft: for shots that are already
+   bright but carry a heavy blue cast, which only need the colour pulled out. */
+@utility photo-light {
+  filter: brightness(1.4) saturate(0.4) contrast(1);
+}
+@utility photo-soft {
+  filter: brightness(1.12) saturate(0.3) contrast(0.97);
+}
+/* Home hero. The three slides are a warm interior, a cold blue macro and a
+   neutral office shot, so they are pulled toward each other rather than
+   drained — the brand gradient over the top does the harmonising. */
+@utility photo-hero {
+  filter: saturate(0.92) contrast(1.06) brightness(1.02);
 }
 
 /* Scrollbar */
@@ -133,14 +176,14 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #F6F2EA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c4c4c4;
+  background: #CFC9BE;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #B5AE9F;
 }
 
 /* Hide scrollbar for horizontal scroll */

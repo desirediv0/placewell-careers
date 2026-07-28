@@ -1,4 +1,4 @@
-import Hero from '@/components/hero'
+import Hero from '@/components/hero-centered'
 import Pillars from '@/components/pillars'
 import About from '@/components/about'
 import Team from '@/components/team'

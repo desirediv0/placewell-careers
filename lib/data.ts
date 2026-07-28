@@ -2,7 +2,7 @@ export const siteData = {
   company: 'Placewell Careers',
   tagline: 'Building Teams. Shaping Leaders.',
   founded: 2008,
-  logo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TIe9uCZUi04GjJMI3fExxz2iMIFstn.png',
+  logo: '/placewell-logo.png',
   
   hero: {
     headline: 'Building Teams. Shaping Leaders.',
@@ -48,22 +48,22 @@ export const siteData = {
       {
         year: '2008',
         title: 'The Beginning',
-        description: 'Placewell Careers was founded with a vision to build a trusted recruitment organization focused on creating meaningful connections between talent and opportunity. Starting with a handful of clients, the company laid the foundation for long-term, relationship-driven growth.',
+        description: 'Placewell Careers was founded to build a trusted recruitment organization that creates meaningful connections between talent and opportunity. Starting with a handful of clients, we laid the foundation for long-term, relationship-driven growth.',
       },
       {
         year: '2008–2024',
         title: 'Growing Through Partnerships',
-        description: 'A key differentiator in our journey has been our collaborative partnership model. By bringing together experienced recruitment professionals across industries and geographies, Placewell Careers expanded its reach and built a team of 50+ professionals dedicated to delivering quality hiring solutions.',
+        description: 'Our collaborative partnership model brought together experienced recruitment professionals across industries and geographies, helping us grow into a team of 50+ experts delivering quality hiring solutions.',
       },
       {
         year: 'Today',
         title: 'Expanding Capabilities',
-        description: 'Today, Placewell Careers serves organizations across BFSI, Fintech, IT/EdTech, Healthcare, Hospitality, and other emerging sectors. Alongside our established partnership network, we are strengthening our capabilities through dedicated recruitment teams focused on leadership and critical hiring, enabling us to deliver deeper expertise and greater execution excellence.',
+        description: 'Today, we serve organizations across BFSI, Fintech, IT/EdTech, Healthcare, Hospitality, and other sectors. With dedicated recruitment teams for leadership and critical hiring, we deliver deeper expertise and stronger execution.',
       },
       {
         year: 'Looking Ahead',
         title: 'Building Specialized Practices',
-        description: 'As we enter our next phase of growth, we are focused on developing specialized industry practices, expanding leadership hiring capabilities, and creating high-performing recruitment teams that deliver strategic talent solutions for evolving business needs.',
+        description: 'As we continue to grow, we are expanding specialized industry practices, strengthening leadership hiring, and building high-performing teams to deliver strategic talent solutions.',
       },
     ],
   },
@@ -73,7 +73,7 @@ export const siteData = {
       name: 'Saveena Grover',
       role: 'Promoter',
       bio: 'The driving force behind Placewell Careers, Saveena provides strategic direction and long-term vision for the organization. An Economics graduate, she is known for her collaborative leadership style and focus on building a culture of integrity, ownership, and sustainable growth.',
-      image: '/team/saveena-grover.jpg',
+      image: '/team/saveena-grover.png',
       experience: '18+ Years',
       expertise: ['Strategic Leadership', 'Business Development', 'Organizational Growth'],
       linkedin: 'https://www.linkedin.com/company/placewell-careers/',

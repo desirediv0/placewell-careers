@@ -9,27 +9,27 @@ const industries = [
     name: 'BFSI',
     description: 'Banking, Financial Services and Insurance hiring across sales, operations, technology, compliance and leadership positions.',
     tag: 'Leadership Hiring',
-    color: 'from-blue-600 to-blue-800',
-    bgColor: 'bg-blue-50',
-    iconColor: 'text-blue-600',
+    color: 'from-[#0E6F66] to-[#0A5A52]',
+    bgColor: 'bg-[#E8F4F1]',
+    iconColor: 'text-[#0E6F66]',
   },
   {
     icon: WalletCards,
     name: 'Fintech',
     description: 'Supporting high-growth fintech companies with technology, operations, product and leadership recruitment.',
     tag: 'Digital Talent',
-    color: 'from-indigo-600 to-indigo-800',
-    bgColor: 'bg-indigo-50',
-    iconColor: 'text-indigo-600',
+    color: 'from-[#E3A33F] to-[#C9821F]',
+    bgColor: 'bg-[#FDF3E3]',
+    iconColor: 'text-[#B0721A]',
   },
   {
     icon: Building2,
     name: 'GCC',
     description: 'Global Capability Centers hiring across technology, operations, analytics and leadership functions.',
     tag: 'Global Delivery',
-    color: 'from-violet-600 to-violet-800',
-    bgColor: 'bg-violet-50',
-    iconColor: 'text-violet-600',
+    color: 'from-[#2F68AB] to-[#27578F]',
+    bgColor: 'bg-[#EDF3F9]',
+    iconColor: 'text-[#2F68AB]',
   },
 ]
 
@@ -41,12 +41,12 @@ export default function Industries() {
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-3">
-            <div className="w-8 h-[2px] bg-[#1D4ED8]" />
-            <span className="text-[#1D4ED8] text-sm font-semibold tracking-wider uppercase">Our Expertise</span>
-            <div className="w-8 h-[2px] bg-[#1D4ED8]" />
+            <div className="w-8 h-[2px] bg-[#0E6F66]" />
+            <span className="text-[#0E6F66] text-sm font-semibold tracking-wider uppercase">Our Expertise</span>
+            <div className="w-8 h-[2px] bg-[#0E6F66]" />
           </div>
-          <h2 className="text-h2 font-bold text-[#0f172a] mb-3">Industries We Serve</h2>
-          <p className="text-body-lg text-[#64748b] max-w-2xl mx-auto">
+          <h2 className="text-h2 font-bold text-[#14181D] mb-3">Industries We Serve</h2>
+          <p className="text-body-lg text-[#3B434C] max-w-2xl mx-auto">
             Delivering specialized recruitment solutions across India&apos;s fastest growing industries.
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function Industries() {
               <div
                 key={idx}
                 className={`group relative rounded-[6px] border border-gray-200 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer ${
-                  idx % 3 === 0 ? 'bg-[#f0f7ff]' : idx % 3 === 1 ? 'bg-[#f8fafc]' : 'bg-[#f5f3ff]'
+                  idx % 3 === 0 ? 'bg-[#F1F8F6]' : idx % 3 === 1 ? 'bg-[#FAF8F4]' : 'bg-[#FDF7EF]'
                 }`}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -70,13 +70,13 @@ export default function Industries() {
                   <div className={`w-14 h-14 ${industry.bgColor} rounded-[6px] flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-105`}>
                     <Icon size={28} strokeWidth={1.5} className={`${industry.iconColor}`} />
                   </div>
-                  <h3 className="text-lg font-bold text-[#0f172a] mb-2">{industry.name}</h3>
-                  <p className="text-sm text-[#64748b] leading-relaxed mb-4">{industry.description}</p>
+                  <h3 className="text-lg font-bold text-[#14181D] mb-2">{industry.name}</h3>
+                  <p className="text-sm text-[#3B434C] leading-relaxed mb-4">{industry.description}</p>
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <span className={`inline-block px-3 py-1.5 bg-gradient-to-r ${industry.color} text-white text-[11px] font-semibold rounded-full tracking-wide`}>
+                    <span className={`inline-block px-3 py-1.5 bg-gradient-to-r ${industry.color} text-white text-[12px] font-semibold rounded-full tracking-wide`}>
                       {industry.tag}
                     </span>
-                    <div className={`flex items-center gap-1.5 text-sm font-medium transition-all duration-300 ${isHovered ? 'text-[#1D4ED8] opacity-100' : 'text-gray-400 opacity-0'}`}>
+                    <div className={`flex items-center gap-1.5 text-sm font-medium transition-all duration-300 ${isHovered ? 'text-[#0E6F66] opacity-100' : 'text-gray-400 opacity-0'}`}>
                       <span>Learn more</span>
                       <ArrowRight size={14} className={`transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
                     </div>

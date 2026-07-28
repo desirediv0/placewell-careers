@@ -46,10 +46,10 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 py-3 md:py-4 flex items-center justify-between">
         {/* Logo + Tagline */}
         <Link href="/" className="flex items-center flex-shrink-0 gap-3">
-          <img src={siteData.logo} alt={siteData.company} className="h-14 md:h-20 w-auto" />
-          <span className="hidden lg:block text-[11px] font-semibold text-[#64748b] tracking-wide leading-tight max-w-[120px]">
+          <img src={siteData.logo} alt={siteData.company} className="h-14 md:h-16 w-auto" />
+          {/* <span className="hidden lg:block text-[12px] font-semibold text-[#3B434C] tracking-wide leading-tight max-w-[120px]">
             Building Teams.<br />Shaping Leaders
-          </span>
+          </span> */}
         </Link>
 
         {/* Center Navigation - Desktop */}
@@ -62,13 +62,13 @@ export default function Header() {
                 key={item}
                 href={route}
                 className={`relative text-sm font-medium transition-colors py-1 ${active
-                  ? 'text-[#223A8F]'
-                  : 'text-[#475569] hover:text-[#223A8F]'
+                  ? 'text-[#2F68AB]'
+                  : 'text-[#22282F] hover:text-[#2F68AB]'
                   }`}
               >
                 {item}
                 {active && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#223A8F] rounded-full" />
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#2F68AB] rounded-full" />
                 )}
               </Link>
             )
@@ -78,12 +78,12 @@ export default function Header() {
         {/* Right Side CTAs - Desktop */}
         <div className="hidden lg:flex items-center gap-3">
           <Link href="/contact">
-            <button className="h-[42px] px-5 border border-[#223A8F] text-[#223A8F] font-medium text-sm rounded-[6px] hover:bg-[#F5F7FA] transition-colors">
+            <button className="h-[42px] px-5 border border-[#2F68AB] text-[#2F68AB] font-medium text-sm rounded-[6px] hover:bg-[#F6F2EA] transition-colors">
               Drop Your CV
             </button>
           </Link>
           <Link href="/contact">
-            <button className="h-[42px] px-5 bg-[#223A8F] text-white font-medium text-sm rounded-[6px] hover:bg-[#1a2a6f] transition-colors">
+            <button className="h-[42px] px-5 bg-[#2F68AB] text-white font-medium text-sm rounded-[6px] hover:bg-[#27578F] transition-colors">
               Enquiry
             </button>
           </Link>
@@ -92,7 +92,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[#1F2937] p-2 -mr-2"
+          className="lg:hidden text-[#14181D] p-2 -mr-2"
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -108,7 +108,7 @@ export default function Header() {
             </Link>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-[#1F2937] p-2 -mr-2"
+              className="text-[#14181D] p-2 -mr-2"
               aria-label="Close menu"
             >
               <X size={22} />
@@ -125,8 +125,8 @@ export default function Header() {
                   href={route}
                   onClick={() => setIsOpen(false)}
                   className={`text-xl font-semibold transition-colors ${active
-                    ? 'text-[#223A8F]'
-                    : 'text-[#1F2937] hover:text-[#223A8F]'
+                    ? 'text-[#2F68AB]'
+                    : 'text-[#14181D] hover:text-[#2F68AB]'
                     }`}
                 >
                   {item}
@@ -136,12 +136,12 @@ export default function Header() {
 
             <div className="flex flex-col gap-3 mt-6 w-full max-w-xs">
               <Link href="/contact" onClick={() => setIsOpen(false)}>
-                <button className="w-full h-[48px] border border-[#223A8F] text-[#223A8F] font-semibold text-sm rounded-[6px] hover:bg-[#F5F7FA] transition-colors">
+                <button className="w-full h-[48px] border border-[#2F68AB] text-[#2F68AB] font-semibold text-sm rounded-[6px] hover:bg-[#F6F2EA] transition-colors">
                   Drop Your CV
                 </button>
               </Link>
               <Link href="/contact" onClick={() => setIsOpen(false)}>
-                <button className="w-full h-[48px] bg-[#223A8F] text-white font-semibold text-sm rounded-[6px] hover:bg-[#1a2a6f] transition-colors">
+                <button className="w-full h-[48px] bg-[#2F68AB] text-white font-semibold text-sm rounded-[6px] hover:bg-[#27578F] transition-colors">
                   Enquiry
                 </button>
               </Link>

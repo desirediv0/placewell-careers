@@ -22,25 +22,33 @@ export default function TeamPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#0b1a30]">
+      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#0B0F14]">
         <div className="absolute inset-0">
-          <img src="/team-hero-bg.png" alt="Placewell Careers Leadership" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a30] via-[#0b1a30]/70 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0b1a30]/80 via-transparent to-[#0b1a30]/20" />
+          <img src="/team-hero-bg.jpg" alt="Placewell Careers Leadership" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#0B0F14]/48" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/90 via-[#0B0F14]/20 to-[#0B0F14]/75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0E6F66]/35 via-transparent to-[#C9821F]/28 mix-blend-soft-light" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(11,15,20,0.30) 0%, rgba(11,15,20,0.62) 100%)',
+            }}
+          />
         </div>
 
         <div className="relative z-10 w-full pb-16 px-5 md:px-8">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex items-center gap-2 text-sm text-[#8b9dc3] mb-8">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <div className="flex items-center gap-2 text-sm text-white/70 mb-8">
+              <Link href="/" className="hover:text-[#5EC4B6] transition-colors">Home</Link>
               <ChevronRight size={14} />
-              <span className="text-white">Team</span>
+              <span className="text-white font-medium">Team</span>
             </div>
 
             <h1 className="text-h1 font-bold text-white leading-[1.1] mb-4">
               Meet The People<br />Driving Recruitment Excellence.
             </h1>
-            <p className="text-body-lg text-[#b8c7de] max-w-lg">
+            <p className="text-body-lg text-white/80 max-w-lg">
               Experienced professionals with decades of combined expertise in talent acquisition and strategic hiring across India&apos;s leading industries.
             </p>
           </div>
@@ -48,7 +56,7 @@ export default function TeamPage() {
       </section>
 
       {/* Leadership Team Cards */}
-      <section className="py-12 md:py-16 px-5 md:px-8 bg-[#f8fafc]">
+      <section className="py-12 md:py-16 px-5 md:px-8 bg-[#FAF8F4]">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {siteData.team.map((member, idx) => {
@@ -69,7 +77,7 @@ export default function TeamPage() {
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                   >
-                    <div className={`absolute top-0 left-0 right-0 h-1 bg-[#1D4ED8] transition-all duration-500 z-10 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
+                    <div className={`absolute top-0 left-0 right-0 h-1 bg-[#0E6F66] transition-all duration-500 z-10 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
 
                     <div className="relative h-96 min-h-[384px] bg-gradient-to-br from-gray-100 to-gray-50 overflow-hidden rounded-t-[6px]">
                       <img 
@@ -77,20 +85,17 @@ export default function TeamPage() {
                         alt={member.name}
                         className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute top-4 right-4 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#1D4ED8] shadow-sm">
-                        {member.experience}
-                      </div>
                     </div>
 
                     <div className="p-7">
-                      <h3 className="text-xl font-bold text-[#0f172a] mb-1">{member.name}</h3>
-                      <p className="text-sm font-medium text-[#1D4ED8] mb-4">{member.role}</p>
+                      <h3 className="text-xl font-bold text-[#14181D] mb-1">{member.name}</h3>
+                      <p className="text-sm font-medium text-[#0E6F66] mb-4">{member.role}</p>
                       <div className="w-10 h-[2px] bg-gray-200 mb-4" />
-                      <p className="text-[15px] text-[#64748b] leading-relaxed mb-5 line-clamp-3">{member.bio}</p>
+                      <p className="text-[16px] text-[#3B434C] leading-relaxed mb-5 line-clamp-3">{member.bio}</p>
 
                       <div className="flex flex-wrap gap-2 mb-5">
                         {member.expertise.slice(0, 3).map((skill, skillIdx) => (
-                          <span key={skillIdx} className="px-3 py-1.5 bg-gray-100 text-[#475569] text-xs font-medium rounded-md">
+                          <span key={skillIdx} className="px-3 py-1.5 bg-gray-100 text-[#22282F] text-xs font-medium rounded-md">
                             {skill}
                           </span>
                         ))}
@@ -107,7 +112,7 @@ export default function TeamPage() {
                         </a>
                         <button
                           onClick={() => setExpandedId(isExpanded ? null : idx)}
-                          className="flex items-center gap-1.5 text-sm font-medium text-[#1D4ED8] hover:text-[#1e3a8a] transition-colors"
+                          className="flex items-center gap-1.5 text-sm font-medium text-[#0E6F66] hover:text-[#0A5A52] transition-colors"
                         >
                           {isExpanded ? 'Show Less' : 'Full Profile'}
                           <ChevronRightIcon size={14} className={`transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
@@ -116,10 +121,10 @@ export default function TeamPage() {
 
                       {isExpanded && (
                         <div className="mt-4 pt-4 border-t border-gray-100">
-                          <p className="text-[14px] text-[#64748b] leading-relaxed">{member.bio}</p>
+                          <p className="text-[15px] text-[#3B434C] leading-relaxed">{member.bio}</p>
                           <div className="flex flex-wrap gap-2 mt-3">
                             {member.expertise.map((skill, skillIdx) => (
-                              <span key={skillIdx} className="px-3 py-1.5 bg-blue-50 text-[#1D4ED8] text-xs font-medium rounded-md">
+                              <span key={skillIdx} className="px-3 py-1.5 bg-[#E8F4F1] text-[#0E6F66] text-xs font-medium rounded-md">
                                 {skill}
                               </span>
                             ))}
@@ -145,10 +150,10 @@ export default function TeamPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Text */}
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#14181D] mb-6">
                     Team Placewell: Built on Partnerships. Driven by Expertise.
                   </h3>
-                  <p className="text-body-lg text-[#64748b] leading-relaxed whitespace-pre-line">
+                  <p className="text-body-lg text-[#3B434C] leading-relaxed whitespace-pre-line">
                     {siteData.teamNote}
                   </p>
                 </div>
@@ -166,25 +171,25 @@ export default function TeamPage() {
       <section className="py-12 md:py-16 px-5 md:px-8 bg-white">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-h2 font-bold text-[#0f172a] mb-3">Vision &amp; Mission</h2>
+            <h2 className="text-h2 font-bold text-[#14181D] mb-3">Vision &amp; Mission</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="flex gap-3.5 items-start p-6 bg-[#f8fafc] rounded-[6px] border border-gray-200 shadow-sm">
-              <div className="w-10 h-10 bg-blue-50 rounded-[6px] flex items-center justify-center text-[#2D6CDF] flex-shrink-0">
+            <div className="flex gap-3.5 items-start p-6 bg-[#FAF8F4] rounded-[6px] border border-gray-200 shadow-sm">
+              <div className="w-10 h-10 bg-[#E8F4F1] rounded-[6px] flex items-center justify-center text-[#0E6F66] flex-shrink-0">
                 <Eye size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#1F2937] mb-2">Our Vision</h3>
-                <p className="text-sm text-[#4B5563] leading-relaxed">{siteData.vision}</p>
+                <h3 className="text-lg font-bold text-[#14181D] mb-2">Our Vision</h3>
+                <p className="text-sm text-[#22282F] leading-relaxed">{siteData.vision}</p>
               </div>
             </div>
-            <div className="flex gap-3.5 items-start p-6 bg-[#f8fafc] rounded-[6px] border border-gray-200 shadow-sm">
-              <div className="w-10 h-10 bg-blue-50 rounded-[6px] flex items-center justify-center text-[#2D6CDF] flex-shrink-0">
+            <div className="flex gap-3.5 items-start p-6 bg-[#FAF8F4] rounded-[6px] border border-gray-200 shadow-sm">
+              <div className="w-10 h-10 bg-[#E8F4F1] rounded-[6px] flex items-center justify-center text-[#0E6F66] flex-shrink-0">
                 <Target size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#1F2937] mb-2">Our Mission</h3>
-                <p className="text-sm text-[#4B5563] leading-relaxed">{siteData.mission}</p>
+                <h3 className="text-lg font-bold text-[#14181D] mb-2">Our Mission</h3>
+                <p className="text-sm text-[#22282F] leading-relaxed">{siteData.mission}</p>
               </div>
             </div>
           </div>

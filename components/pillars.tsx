@@ -57,10 +57,10 @@ export default function Pillars() {
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-h2 font-bold text-[#0f172a] mb-3">
+          <h2 className="text-h2 font-bold text-[#14181D] mb-3">
             Our Pillars of Success
           </h2>
-          <p className="text-body text-[#4B5563] max-w-2xl mx-auto">
+          <p className="text-body text-[#22282F] max-w-2xl mx-auto">
             The key principles that drive our exceptional recruitment performance.
           </p>
         </div>
@@ -78,29 +78,29 @@ export default function Pillars() {
                 viewport={{ once: true, margin: '-40px' }}
                 variants={cardVariants}
                 className={`group relative rounded-[6px] border border-gray-200 p-8 h-full hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ${
-                  idx % 3 === 0 ? 'bg-[#f0f7ff]' : idx % 3 === 1 ? 'bg-[#f8fafc]' : 'bg-[#f5f3ff]'
+                  idx % 3 === 0 ? 'bg-[#F1F8F6]' : idx % 3 === 1 ? 'bg-[#FAF8F4]' : 'bg-[#FDF7EF]'
                 }`}
               >
                 {/* Blue top accent */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#1D4ED8] rounded-t-[6px] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#0E6F66] rounded-t-[6px] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
                 {/* Icon */}
-                <div className="w-[48px] h-[48px] rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Icon size={52} className="text-[#1D4ED8]" strokeWidth={1.5} />
+                <div className="w-[48px] h-[48px] rounded-full bg-[#E8F4F1] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Icon size={52} className="text-[#0E6F66]" strokeWidth={1.5} />
                 </div>
 
                 {/* Stat */}
-                <div className="text-[20px] font-bold text-[#0f172a] leading-none mb-1 tracking-tight">
+                <div className="text-[20px] font-bold text-[#14181D] leading-none mb-1 tracking-tight">
                   {pillar.stat}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[16px] font-bold text-[#1F2937] mb-3 leading-snug">
+                <h3 className="text-[17px] font-bold text-[#14181D] mb-3 leading-snug">
                   {pillar.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[16px] text-[#4B5563] leading-relaxed">
+                <p className="text-[17px] text-[#22282F] leading-relaxed">
                   {pillar.description}
                 </p>
               </motion.div>
@@ -110,8 +110,8 @@ export default function Pillars() {
 
         {/* Bottom */}
         <div className="mt-14 text-center">
-          <div className="w-12 h-[2px] bg-[#1D4ED8] mx-auto mb-5" />
-          <p className="text-body text-[#4B5563] italic">
+          <div className="w-12 h-[2px] bg-[#0E6F66] mx-auto mb-5" />
+          <p className="text-body text-[#22282F] italic">
             Committed to Excellence in Recruitment &amp; Talent Solutions.
           </p>
         </div>
