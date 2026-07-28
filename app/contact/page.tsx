@@ -589,15 +589,6 @@ export default function ContactPage() {
                     <Phone size={12} />
                     Call
                   </a>
-                  <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address ? `${office.address}, ${office.city}` : `${office.city}, India`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#FAF8F4] hover:bg-[#0E6F66] hover:text-white text-[#22282F] text-xs font-semibold rounded-lg transition-all border border-gray-100"
-                  >
-                    <MapPin size={12} />
-                    Map
-                  </a>
                 </div>
               </motion.div>
             ))}

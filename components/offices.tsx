@@ -1,6 +1,6 @@
 'use client'
 
-import { MapPin, Phone, Mail, ExternalLink, Building2, ChevronRight } from 'lucide-react'
+import { MapPin, Phone, Mail, Building2, ChevronRight } from 'lucide-react'
 import { siteData } from '@/lib/data'
 
 export default function Offices() {
@@ -100,17 +100,6 @@ export default function Offices() {
                     <span className="text-xs truncate">{office.email}</span>
                   </a>
                 </div>
-
-                {/* View on Map */}
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address ? `${office.address}, ${office.city}` : `${office.city}, India`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 w-full flex items-center justify-center gap-1.5 py-2 text-xs font-semibold text-[#0E6F66] bg-[#E8F4F1] rounded-[6px] hover:bg-[#0E6F66] hover:text-white transition-all duration-300"
-                >
-                  <ExternalLink size={11} />
-                  View on Map
-                </a>
               </div>
             </div>
           ))}
