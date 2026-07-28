@@ -2,6 +2,8 @@ import { createServer } from 'http';
 import next from 'next';
 import dotenv from 'dotenv';
 
+process.env.AWS_SDK_JS_SUPPRESS_NODE_DEPRECATION_WARNING = "1";
+
 // Load environment variables
 dotenv.config();
 
