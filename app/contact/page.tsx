@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
 import { siteData } from '@/lib/data'
+import { toEmails } from '@/lib/utils'
 import {
   MapPin, Phone, Mail, Clock, Upload, CheckCircle, ChevronDown, ChevronRight, ArrowRight, AlertCircle,
 } from 'lucide-react'
@@ -575,10 +576,12 @@ export default function ContactPage() {
                     <Phone size={13} className="flex-shrink-0" />
                     <span className="truncate">{office.phone}</span>
                   </a>
-                  <a href={`mailto:${office.email}`} className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors">
-                    <Mail size={13} className="flex-shrink-0" />
-                    <span className="truncate">{office.email}</span>
-                  </a>
+                  {toEmails(office.email).map((email) => (
+                    <a key={email} href={`mailto:${email}`} title={email} className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors">
+                      <Mail size={13} className="flex-shrink-0" />
+                      <span className="truncate">{email}</span>
+                    </a>
+                  ))}
                 </div>
 
                 <div className="flex gap-2">

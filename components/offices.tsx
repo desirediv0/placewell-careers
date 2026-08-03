@@ -2,6 +2,7 @@
 
 import { MapPin, Phone, Mail, Building2, ChevronRight } from 'lucide-react'
 import { siteData } from '@/lib/data'
+import { toEmails } from '@/lib/utils'
 
 export default function Offices() {
   return (
@@ -90,15 +91,19 @@ export default function Offices() {
                     <span className="text-xs">{office.phone}</span>
                   </a>
 
-                  <a
-                    href={`mailto:${office.email}`}
-                    className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors group/link"
-                  >
-                    <div className="w-6 h-6 rounded-[4px] bg-gray-100 group-hover/link:bg-[#E8F4F1] flex items-center justify-center transition-colors">
-                      <Mail size={11} className="text-[#3B434C] group-hover/link:text-[#0E6F66]" />
-                    </div>
-                    <span className="text-xs truncate">{office.email}</span>
-                  </a>
+                  {toEmails(office.email).map((email) => (
+                    <a
+                      key={email}
+                      href={`mailto:${email}`}
+                      title={email}
+                      className="flex items-center gap-2 text-sm text-[#22282F] hover:text-[#0E6F66] transition-colors group/link"
+                    >
+                      <div className="w-6 h-6 rounded-[4px] bg-gray-100 group-hover/link:bg-[#E8F4F1] flex items-center justify-center transition-colors">
+                        <Mail size={11} className="text-[#3B434C] group-hover/link:text-[#0E6F66]" />
+                      </div>
+                      <span className="text-xs truncate">{email}</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

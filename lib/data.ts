@@ -201,7 +201,7 @@ export const siteData = {
       city: 'Punjab / Chandigarh',
       contact: 'Ms. Minakshi Deshwal · Mr. Arvin Gupta',
       address: '',
-      email: 'arvin@placewellcareers.com',
+      email: ['minakshi@placewellcareers.com', 'arvin@placewellcareers.com'],
       phone: '+91 85289 39811 · +91 87278 79701',
     },
     {
@@ -215,7 +215,7 @@ export const siteData = {
       city: 'Haryana',
       contact: 'Ms. Shilpa Thakur · Ms. Nidhi Verma',
       address: '',
-      email: 'shilpa@placewellcareers.com',
+      email: ['shilpa@placewellcareers.com', 'resume@placewellcareers.com'],
       phone: '+91 87086 25938 · +91 87086 70408',
     },
     {
