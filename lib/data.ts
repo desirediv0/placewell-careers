@@ -230,7 +230,7 @@ export const siteData = {
       contact: 'Mr. Ashish Omar',
       address: '',
       email: 'ashish@placewellcareers.com',
-      phone: '+91 91490 68273',
+      phone: '+91 91406 68273',
     },
   ],
 
